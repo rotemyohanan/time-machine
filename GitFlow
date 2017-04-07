@@ -1,18 +1,26 @@
-using Git Flow
+Using Git Flow
 --------------
+
+Note: Run the following commands in order.
+
+When TAG = 01082016
 
 Before Finish:
 -------------
-pull develop
-pull master
-pull hotfix/01082016
+1. pull develop
+2. pull master
+3. pull hotfix/01082016
 
 Finish:
 ------
-git flow finish
+1. git flow hotfix finish 01082016
 
 After Finish:
 -------------
-git push origin master
-git push origin develop
-git push origin 01082016
+1. git push origin master
+2. git push origin develop
+3. git push origin 01082016
+
+
+------------------------------------------------------
+Link: https://danielkummer.github.io/git-flow-cheatsheet/
