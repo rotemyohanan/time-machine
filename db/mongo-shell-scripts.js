@@ -15,7 +15,7 @@ var keys = [];
 db.doors.find({}).forEach(function(doc){
     for (var key in doc){ 
       if(typeof(doc[key]) == 'number' && doc[key] > 20000){
-       keys.push({"doc.id": doc._id, "key":key, "value":doc[key]});
+       keys.push({"doc.id": doc._id, "key":key, "value":doc[key]}); // insert {} to add object into the list.
       }
     }
 });
