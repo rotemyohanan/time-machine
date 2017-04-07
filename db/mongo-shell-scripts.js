@@ -1,6 +1,6 @@
 //using java-script in the mongo shell
 // ---------------------------------------------------------------------------------------------------
-//  Simple examples
+//  Simple examples:
 // ---------------------------------------------------------------------------------------------------
 var glbal = db.getCollection('binaryObject').find({}).forEach(function(binary){
     var bin =  binary.name;
@@ -22,4 +22,14 @@ db.doors.find({}).forEach(function(doc){
 print(keys);   // prints all the results
 
 // ---------------------------------------------------------------------------------------------------
+//  Extract all the keys from a document.
 // ---------------------------------------------------------------------------------------------------
+
+var keys = [];
+db.repoElement.find({'_id':'58b2beb3f026c13e30d0f564'}).forEach(function(doc){
+    for (var key in doc){ 
+           keys.push(key);
+    }
+});
+
+print(keys);
