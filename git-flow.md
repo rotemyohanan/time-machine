@@ -1,4 +1,4 @@
-== Using Git Flow
+Using Git Flow
 --------------
 
 Before Finish:
