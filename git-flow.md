@@ -9,7 +9,7 @@ Before Finish:
 
 Finish:
 ------
-    git flow finish
+    git flow hotfix finish 01082016
 
 After Finish:
 -------------
