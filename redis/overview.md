@@ -26,28 +26,21 @@ Keys: are how you identify pieces of data.
 Values: represent the actual data associated with the key.
 
 For the most part, Redis treats values as a byte array and doesn’t care what they are.
-
 Redis doesn’t allow you to query an object’s values.
-    
 Persistance: By default, Redis snapshots the database to disk based on how many keys have changed.
-    
-With respect to memory, Redis keeps all your data in memory. The obvious implication of this is the cost of running Redis: RAM is still the most expensive part of server hardware.
-    
-Redis doesn’t do auto-compression but, since it treats values as bytes, there’s no reason you can’t trade processing time for RAM by compressing/decompressing the data yourself.)
-=========================================================================================
-When you add those three things together you end up with something wonderful: speed. Some people think “Of course Redis is fast, everything’s in memory.” But that’s only part of it. The real reason Redis shines versus other solutions is its specialized data structures.
-=========================================================================================
+With respect to memory, Redis keeps all your data in memory. The obvious implication of this is the cost of running Redis. RAM is still the most expensive part of server hardware. Redis does not do auto-compression but since it treats values as bytes, there is no reason you can't trade processing time for RAM by compressing the data yourself. When you add those three things together you end up with something wonderful: speed. Some people think “Of course Redis is fast, everything’s in memory.” But that’s only part of it. The real reason Redis shines versus other solutions is its specialized data structures.
+
     
 How fast? 
-=========
+-----------------------
 Redis’ performance tends to be measured in tens of thousands, or hundreds of thousands of operations per second.
     
-run 'redis-benchmark' (which is in the same folder as the 'redis-server' and 'redis-cli') to test it out yourself.
+run 'redis-benchmark' , which is in the same folder as the 'redis-server' and 'redis-cli' to test it out yourself.
 
-==========================================================================================
+--------------------------
     
 Concepts:
--------------------------------------------------------------------------------------------
+------------------------------------------------------------
 • Keys are strings which identify pieces of data (values)
 • Values are arbitrary byte arrays that Redis doesn’t care about
 • Redis exposes five specialized data structures
@@ -59,7 +52,7 @@ Data Structures:
 'flushdb' - You can always ''erase all'' the values in your database by entering 'flushdb'.
     
 Strings:
-========
+--------------------------
 Strings are the most basic data structures available in Redis.
     
 Common operations:
@@ -72,7 +65,7 @@ since getting a value by key is so fast, strings are often used to cache
 data.
     
 Hashs:
-======
+--------------------------
 
 The important difference between string and Hash is that they provide an extra level of indirection.
 example:  
@@ -94,7 +87,7 @@ As you can see, hashes give us a bit more control over plain strings. Rather tha
 Looking at hashes from the perspective of a well-defined object, such as a user, is key to understanding how they work. And it’s true that, for performance reasons, more granular control might be useful.
     
 Lists
-=====
+--------------------------
 Lists let you store and manipulate an array of values for a given key. You can add values to the list, get the first or last value and manipulate values at a given index. Lists maintain their order and have efficient index-based operations. 
 
     
@@ -112,7 +105,7 @@ The above is a bit of Ruby.
 The values can be anything. You could use lists to store logs or track the path a user is taking through a site.
     
 Sets
-====
+--------------------------
 Set are used to store unique values and provide a number of set-based operations, like unions.
     
 Sets aren’t ordered but they provide efficient value-based operations. A friend’s list is the classic example of using a set:
@@ -132,7 +125,7 @@ and even store the result at a new key:
 Sets are great for tagging or tracking any other properties of a value for which duplicates don’t make any sense (or where we want to apply set operations such as intersections and unions).
      
 Sorted Sets
-===========
+--------------------------
     
 The last and most powerful data structure are sorted sets. 
 If hashes are like strings but with fields, then sorted sets are like sets but with a score. The score provides sorting and ranking capabilities. If we wanted a ranked list of friends,
