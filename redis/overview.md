@@ -66,14 +66,15 @@ data.
     
 Hashs:
 --------------------------
-
 The important difference between string and Hash is that they provide an extra level of indirection.
+
 example:  
 --------
 hset users:goku powerlevel 9000
 hget users:goku powerlevel
     
 set multiple fields at once, get multiple fields at once, get all fields and values, list all the fields or delete a specific field
+
 example:  
 -------
 hmset users:goku race saiyan age 737
