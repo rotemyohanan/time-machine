@@ -33,7 +33,7 @@ With respect to memory, Redis keeps all your data in memory. The obvious implica
     
 How fast? 
 -----------------------
-Redis’ performance tends to be measured in tens of thousands, or hundreds of thousands of operations per second.
+Redis’ performance tends to be measured in 10,000/100,000 operations [per second].
     
 run 'redis-benchmark' , which is in the same folder as the 'redis-server' and 'redis-cli' to test it out yourself.
 
