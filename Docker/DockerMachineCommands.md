@@ -6,6 +6,8 @@ For each machine you create, the Docker host address is the IP address of the Li
 
     docker-machine create
     docker-machine ls    // list the machines you have created.
+    docker-machine ip <machine-name>    // returns a specific host’s IP address.
+
 
 docker-machine ls:
 
