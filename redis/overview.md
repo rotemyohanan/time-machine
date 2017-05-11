@@ -48,8 +48,6 @@ Concepts:
 
 Data Structures:
 -------------------------------------------------------------------------------------------
-
-'flushdb' - You can always ''erase all'' the values in your database by entering 'flushdb'.
     
 Strings:
 --------------------------
@@ -172,6 +170,10 @@ Every Redis command is atomic, including the ones that do multiple things.
 Additionally, Redis has support for transactions when using multiple commands.
     
 
+
+Delete:
+=======
+'flushdb' : ''erase all'' the values in your database.
     
  
     
