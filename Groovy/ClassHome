@@ -1,0 +1,5 @@
+The ClassHome is the mainClass handles th e upload of the application's data into a local directory in the fileSystem.
+
+It takes the gonfig parameters and values and copy all the mostly used data in a local folder.
+
+The motivation is to take the code and put all the important information in one place, enable the application to run quickly.
