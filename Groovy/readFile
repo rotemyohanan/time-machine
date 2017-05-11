@@ -1,0 +1,8 @@
+
+
+How to define my directory from the project:
+
+
+Reading a specific file:
+-----------------
+String fileContents = new File('/path/to/file').getText('UTF-8')
