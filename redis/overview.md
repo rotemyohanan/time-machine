@@ -41,10 +41,10 @@ run 'redis-benchmark' , which is in the same folder as the 'redis-server' and 'r
     
 Concepts:
 ------------------------------------------------------------
-• Keys are strings which identify pieces of data (values)
-• Values are arbitrary byte arrays that Redis doesn’t care about
-• Redis exposes five specialized data structures
-• Combined, the above make Redis fast and easy to use, but not suitable for every scenario
+ - Keys are Strings which identify pieces of data (values).
+ - Values are arbitrary byte arrays that Redis doesn’t care about.
+ - Redis exposes 5 specialized data structures
+ - Combined, the above make Redis fast and easy to use, but not suitable for every scenario.
 
 Data Structures:
 -------------------------------------------------------------------------------------------
