@@ -22,8 +22,10 @@ Docker Machine is a tool that lets you install Docker Engine on virtual hosts, a
     run 'docker ps'
     'docker run hello-world' ...
 
-Machine was the only way to run Docker on Mac or Windows previous to Docker v1.12. Starting with the beta program and Docker v1.12, Docker for Mac and Docker for Windows are available as native apps and the better choice for this use case on newer desktops and laptops. We encourage you to try out these new apps. The installers for Do
+Machine was the only way to run Docker previous to Docker v1.12. 
+Docker is available as native apps and the better choice for this use case on newer desktops and laptops. 
 
 
+=============================================
 
 cloud providers:AWS/Digital Ocean.
