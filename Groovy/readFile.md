@@ -5,13 +5,12 @@ How to define my directory from the project:
 
 Reading a specific file:
 -----------------
-String fileContents = new File('/path/to/file').getText('UTF-8')
+    String fileContents = new File('/path/to/file').getText('UTF-8')
 
 
-The new File()
-is relative to the current position.
+The new File() is relative to the current position.
 
-The absolute path is related to the ClassLoader() definition.
+The absolute path is related to the ClassLoader() definition or to the full path of the file in the local file system.
 
 
 Using the ClassLoader():
