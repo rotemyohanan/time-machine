@@ -14,7 +14,8 @@ is relative to the current position.
 The absolute path is related to the ClassLoader() definition.
 
 
-###Using the ClassLoader():
+Using the ClassLoader():
+-----------------
 
       URL url = this.getClass().getClassLoader().getResource(templateName)
       String content = new String(Files.readAllBytes(Paths.get(url.path)))
