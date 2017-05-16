@@ -62,7 +62,9 @@ Ships and runs modern applications better.
 
 **Docker Engine ** 
 Is a small piece of software for building images and running containers.
-This is the core technology.
+This is the core technology that runs containers.
+
+
 
 Docker is written in Golang.
 
@@ -71,7 +73,16 @@ To find an image - go to the DockerHub.
 The official Docker registry.
 
 
+    docker pull mongo  // pull is like download 
+    
+###### Registry security
 
+DTR = Docker Trusted Registry
+Quay Enterprise
+
+Pay for support contract from the Docker Inc.
+
+###### Automated workflow:
 
 
 
