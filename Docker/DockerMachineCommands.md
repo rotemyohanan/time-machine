@@ -36,6 +36,13 @@ That will return a unique Id of the container.
     docker stop web
 stops the contianer form running
    
+   
+Getting into a container:
+
+    docker exec -it <containerId> bash
+Get out of the container:
+     
+     exit
 
 =============================================
 
