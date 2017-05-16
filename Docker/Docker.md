@@ -85,6 +85,18 @@ Pay for support contract from the Docker Inc.
 ###### Automated workflow:
 
 
+------------------------
+#### The Docker daemon
+The Docker daemon (dockerd) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes.
 
+#### The Docker client
+The Docker client (docker) is the primary way that many Docker users interact with Docker. 
 
+#### Docker registry
+A Docker registry stores Docker images. 
+Docker Hub and Docker Cloud are public registries that anyone can use, and Docker is configured to look for images on Docker Hub by default.
 
+    docker pull 
+    docker run 
+    
+The required images are pulled from your configured registry.
