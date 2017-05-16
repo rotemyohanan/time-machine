@@ -100,3 +100,15 @@ Docker Hub and Docker Cloud are public registries that anyone can use, and Docke
     docker run 
     
 The required images are pulled from your configured registry.
+
+#### Docker layers
+
+Each Docker image references a list of read-only layers that represent filesystem differences. 
+Layers are stacked on top of each other to form a base for a container’s root filesystem. 
+
+The Docker storage driver is responsible for stacking these layers and providing a single unified view.
+
+When you create a new container, you add a new, thin, writable layer on top of the underlying stack. 
+This layer is often called the “container layer”. All changes made to the running container - such as writing new files, modifying existing files, and deleting files - are written to this thin writable container layer. 
+
+
