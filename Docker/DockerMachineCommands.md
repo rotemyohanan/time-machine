@@ -26,6 +26,17 @@ Machine was the only way to run Docker previous to Docker v1.12.
 Docker is available as native apps and the better choice for this use case on newer desktops and laptops. 
 
 
+    docker run -d --name web -p 8080:8080 <path>
+    The name of the conteiner is web
+    
+    8080 in the host is contacting with 8080 inside the container
+    
+That will return a unique Id of the container.
+
+    docker stop web
+stops the contianer form running
+   
+
 =============================================
 
 cloud providers:AWS/Digital Ocean.
