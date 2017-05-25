@@ -1,5 +1,8 @@
 
 
+Copy a directory:
+
+    cp <sourceDir> <targetDir>
 
 Zip a directory:
 
