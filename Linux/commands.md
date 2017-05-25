@@ -10,6 +10,6 @@ Zip a directory:
 
 Unzip a directory:
 
-    unzip myfiles.zip -d /opt
+    unzip myfiles.zip -d <directoryName>
     
 **-d**: allows extraction in an arbitrary directory (always assuming one has permission to write to the directory)
