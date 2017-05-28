@@ -2,9 +2,9 @@
 # SAML
 
 ### The SAML specification defines three roles:
- 1. the principal (typically a user)
- 2. the Identity provider (IdP)
- 3. the service provider (SP)
+ 1. the principal (typically a user).
+ 2. the Identity provider (IdP).
+ 3. the service provider (SP).
 
  ### Flow:
  
@@ -25,9 +25,9 @@ The SAML specification defines three roles
 
 Cooperate SSO (Single Sign on)
 
-=======================================
+----
 Idp = identity provider.
 Sp = Service Provider (third party or outsourced supplier)
 such as:
 Telecommunications service providers (TSPs), Application service providers (ASPs), Storage service providers (SSPs)
-=======================================
+----
