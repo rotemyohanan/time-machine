@@ -27,10 +27,9 @@ Cooperate SSO.
 
 ----
 
-    Idp = identity provider.
-    Sp = Service Provider (third party or outsourced supplier)
-    such as:
+    Identity Provider (IdP) - Provides authentication as a serviceץ
+    Service Provider (SP) - Relies on IdP for authentication of its users. (third party or outsourced supplier)
+    exanples:
     Telecommunications service providers (TSPs), Application service providers (ASPs), Storage service providers (SSPs)
-    
-    SSO (Single Sign on).
+    SSO (Single Sign on) 
 ----
