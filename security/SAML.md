@@ -23,11 +23,14 @@ Config the Bintray Org with the SAML server.
 
 The SAML specification defines three roles
 
-Cooperate SSO (Single Sign on)
+Cooperate SSO.
 
 ----
+
     Idp = identity provider.
     Sp = Service Provider (third party or outsourced supplier)
     such as:
     Telecommunications service providers (TSPs), Application service providers (ASPs), Storage service providers (SSPs)
+    
+    SSO (Single Sign on).
 ----
