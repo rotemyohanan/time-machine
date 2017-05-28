@@ -1,11 +1,13 @@
-#SAML
 
-The SAML specification defines three roles:
+# SAML
+
+### The SAML specification defines three roles:
  1. the principal (typically a user)
  2. the Identity provider (IdP)
  3. the service provider (SP)
 
- Flow:
+ ### Flow:
+ 
  The principal requests a service from the service provider.
  The service provider requests and obtains an identity assertion from the identity provider.
  On the basis of this assertion, the service provider can make an access control decision – in other words it can decide whether to perform some service for the connected principal.
