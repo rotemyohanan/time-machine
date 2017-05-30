@@ -6,8 +6,8 @@
 ##### Compile
 
     ./gradlew clean; java interaction/webapp/src/test
-    
-    // java command means running as an application.
+java command means running as an application.
+
 When running test suite inside the IDE, i should add the flag 
     '-Dtest=src/test/Foo.groovy'
 
