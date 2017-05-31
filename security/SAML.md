@@ -21,9 +21,6 @@ SAML server is used to authenticate other users.
 
 Config the Bintray Org with the SAML server.
 
-The SAML specification defines three roles
-
-Cooperate SSO.
 
 ----
 
