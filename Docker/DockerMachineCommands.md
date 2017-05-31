@@ -18,8 +18,8 @@ What is Docker Machine?
 
 Docker Machine is a tool that lets you install Docker Engine on virtual hosts, and manage the hosts with docker-machine commands. (create Docker hosts, start, inspect, stop, and restart, upgrade the Docker client and daemon, configure a Docker client to talk to your host)
 
-    run 'docker-machine env default'  //point to a host called default. (follow on-screen instructions to complete env setup)     
-    run 'docker ps'
+    'docker-machine env default'  //point to a host called default. (follow on-screen instructions to complete env setup)     
+    'docker ps'
     'docker run hello-world' ...
 
 Machine was the only way to run Docker previous to Docker v1.12. 
