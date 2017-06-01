@@ -1,3 +1,10 @@
+## Saving data to the MongoDB using the GROM:
+
+Every time you save a domain instance, Grails validates it using the constraints that you have defined. 
+If any values in the domain instance violate those constraints, the save will fail and the constraint errors will be attached to the domain instance. 
+The trouble is, this failure to save the domain instance happens quietly: you won’t know about it unless you check the return value of save() or call hasErrors().
+
+
 Hibernate sessions:
 
 Hibernate is a session-based ORM framework.
