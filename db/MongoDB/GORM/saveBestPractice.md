@@ -45,10 +45,11 @@ You can make properties transient by adding their names to the static transients
 
  Hibernate session affects persistence of domain instances.
  
- Actions:
- 1. call the save() method. prefer to use the 
+#### Actions:
+----
+- call the save() method:
+   
+    save(failOnError: true)
      
-     save(failOnError: true)
-     
- 2. check the return value of the save method.
+- check the return value of the save method.
  
