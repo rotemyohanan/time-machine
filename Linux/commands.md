@@ -1,8 +1,7 @@
 
 #### grep
 
-    grep Pack README.md
-> Let’s search for the term Pack in the README.md file.
+    grep Pack README.md    // search for the term Pack in the README.md file.
 
 
 Copy a directory:
