@@ -74,3 +74,8 @@ To enable scanning, you will need to use **“context:component-scan”** tag in
     <context:component-scan base-package="com.howtodoinjava.demo.controller" />
 
 The context:component-scan element requires a base-package attribute, which, as its name suggests, specifies a starting point for a recursive component search. 
+
+
+Emphasises:
+ > Always use these annotations over concrete classes; not over interfaces.
+ 
