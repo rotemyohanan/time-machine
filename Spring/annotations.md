@@ -63,7 +63,7 @@ But with @Component, @Repository, @Service and @Controller annotations in place 
 
 
 ### How to enable component scanning
---
+-------
 
 To enable scanning, you will need to use **“context:component-scan”** tag in your **applicationContext.xml** file. e.g.
 
