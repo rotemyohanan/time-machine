@@ -6,6 +6,16 @@ Spring produces a new bean instance each time one is needed.
 Decleration of the bean's scope attribute to be prototype. 
 
 
+#### @Component
+----
+The @Component annotation marks a java class as a bean so the component-scanning mechanism of spring can pick it up and pull it into the application contex.
+
+    @Component
+    public class EmployeeDAOImpl implements EmployeeDAO {
+        ...
+    }
+    
+
 #### @Singleton (default bean's scope)
 ----
 
@@ -31,15 +41,7 @@ The @Service annotation is also a specialization of the component annotation.
 It doesn’t currently provide any additional behavior over the @Component annotation, but it’s a good idea to use @Service over @Component in service-layer classes because it specifies intent better. 
 Additionally, tool support and additional behavior might rely on it in the future.
 
-#### @Component
-----
-The @Component annotation marks a java class as a bean so the component-scanning mechanism of spring can pick it up and pull it into the application contex.
 
-    @Component
-    public class EmployeeDAOImpl implements EmployeeDAO {
-        ...
-    }
-    
 #### @Repository annotation
 ----
 It is a specialization of the @Component annotation.
