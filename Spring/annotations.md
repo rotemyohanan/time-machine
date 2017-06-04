@@ -36,3 +36,14 @@ This annotation serves as a specialization of @Component.
 ----
 
 Allowing for implementation classes to be autodetected through classpath scanning.
+
+
+#### @Autowired
+----
+It handles only wiring of the bean to the specific class. 
+
+### Stereotype annotations
+----
+Define the beans themselves so the container is aware of them and can inject them for you. 
+But with @Component, @Repository, @Service and @Controller annotations in place and after enabling automatic component scanning, spring will automatically import the beans into the container so you don’t have to define them explicitly with XML. These annotations are called Stereotype annotations as well.
+
