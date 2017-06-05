@@ -21,7 +21,7 @@ Jersey provides it’s own API that extend the JAX-RS toolkit with additional fe
 RESTful service and client development. 
 Jersey also exposes numerous extension SPIs so that developers may extend Jersey to best suit their needs.
 
-### Goals of Jersey project can be summarized in the following points:
+### Goals of Jersey project:
 
  1. Track the JAX-RS API and provide regular releases of production quality Reference Implementations that ships with GlassFish.
  2. Provide APIs to extend Jersey & Build a community of users and developers. 
@@ -32,16 +32,24 @@ Root resource classes are POJOs (Plain Old Java Objects) that are annotated with
 
 Using Jersey to annotate Java objects to create RESTful web services.
 
-// ----------------------------------------------- //
-// JAX-RS Annotations
-// ----------------------------------------------- //
+
+### JAX-RS Annotations
+------
     
-@Path  - relative URI path
-    What makes JAX-RS so useful is that you can embed variables in the URIs.
-    These variables are substituted at runtime in order for a resource to respond to a request based on the substituted URI.
-    Variables are denoted by curly braces.
-    example:    @Path("/users/{username}")
-    explain: a user will be prompted to enter their name, and then a Jersey web service configured to respond to requests to this URI path template will respond. 
+**@Path** = relative URI path
+----
+    
+What makes JAX-RS so useful is that you can embed variables in the URIs.
+These variables are substituted at runtime in order for a resource to respond to a request based on the substituted URI.
+Variables are denoted by curly braces {}
+Example:
+
+    @Path("/users/{username}")
+    
+explain: 
+1. A user will be prompted to enter their name.
+2. A Jersey web service configured to respond to requests to this URI path template will respond. 
+
     
 @PathParam - To obtain the value of the username variable the @PathParam may be used on method parameter of a request method.
    example:
