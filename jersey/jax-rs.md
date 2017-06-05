@@ -3,8 +3,9 @@
 
 ## JAX-RS Application, Resources and Sub-Resources (chapter 3)
 -----
-JAX-RS is an specification (just a definition). 
-Jersey is a JAX-RS implementation
+>JAX-RS is an specification (just a definition). 
+
+>Jersey is a JAX-RS implementation
         
 About
 -----
