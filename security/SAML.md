@@ -26,7 +26,7 @@ Config the Bintray Org with the SAML server.
 
     Identity Provider (IdP) - Provides authentication as a serviceץ
     Service Provider (SP) - Relies on IdP for authentication of its users. (third party or outsourced supplier)
-    exanples:
+    Examples:
     Telecommunications service providers (TSPs), Application service providers (ASPs), Storage service providers (SSPs)
     SSO (Single Sign on) 
 ----
