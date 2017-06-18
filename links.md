@@ -27,3 +27,9 @@ https://www.fitnessblender.com/videos/brutal-hiit-workout-game-fat-burning-ladde
 https://www.fitnessblender.com/videos/brutal-abs-workout-abs-obliques-and-lower-back-workout
 
 https://www.fitnessblender.com/videos/cardio-hiit-workout-butt-thighs-abs-ultimate-workout-for-belly-fat-loss-no-equipment
+
+
+### Microservices vs monolithic design
+
+
+https://cloudacademy.com/blog/microservices-architecture-challenge-advantage-drawback/
