@@ -1,4 +1,11 @@
-## Saving data to the MongoDB using the GROM:
+## Saving data to the MongoDB using the GROM: 
+-----
+#### based on the links:
+-----
+
+    https://spring.io/blog/2010/06/23/gorm-gotchas-part-1/
+    https://spring.io/blog/2010/07/02/gorm-gotchas-part-2/
+    https://spring.io/blog/2010/07/28/gorm-gotchas-part-3/
 
 Every time you save a domain instance, Grails validates it using the constraints that you have defined. 
 If any values in the domain instance violate those constraints, the save will fail and the constraint errors will be attached to the domain instance. 
