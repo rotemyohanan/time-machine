@@ -1,5 +1,7 @@
 
-
+#### Sony headphones:
+  http://www.curiua.com/p/sony-mdr-1000x-kabelloser-high-resolution-kopfh-rer-noise-cancelling-sense-engine-nfc-bluetooth-bis-zu-20-stun/4548736032804
+  
 #### Stackoverflow:
 
 https://stackoverflow.com/users/3306301/rotem
