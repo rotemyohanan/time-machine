@@ -128,6 +128,8 @@ https://www.howtogeek.com/180167/htg-explains-what-is-github-and-what-do-geeks-u
 SSO:
 https://www.jfrog.com/confluence/display/RTF/SAML+SSO+Integration#SAMLSSOIntegration-ArtifactoryProfilesandBindings
 
+Artifactoty SSO:  https://www.jfrog.com/knowledge-base/how-do-i-configure-artifactory-saml-sso-with-okta/
+
 ### Microservices
 
 https://cloudacademy.com/blog/microservices-architecture-challenge-advantage-drawback/
