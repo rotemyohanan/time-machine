@@ -123,3 +123,6 @@ https://juliank.wordpress.com/2016/03/14/dropping-sha-1-support-in-apt/
 
 https://www.howtogeek.com/180167/htg-explains-what-is-github-and-what-do-geeks-use-it-for/
 
+SSO:
+https://www.jfrog.com/confluence/display/RTF/SAML+SSO+Integration#SAMLSSOIntegration-ArtifactoryProfilesandBindings
+
