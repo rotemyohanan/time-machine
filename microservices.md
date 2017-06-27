@@ -3,6 +3,7 @@ Monolithic app packaged in 1 war and deployed.
 All the code is tied together. (increase developmenet time)
 
 The WAR is deployed to the App Server(JBOSS, Tomcat, WebLogic)
+
 --------------------------------------------------
 Big App == Big code base == increase load time IDE
 --------------------------------------------------
