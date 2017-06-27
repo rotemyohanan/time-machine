@@ -19,6 +19,10 @@ FL:
 
  https://github.com/goffer14/fans-league-production/tree/master/app
 
+reading silicon valley:
+
+https://medium.com/@timanglade/how-hbos-silicon-valley-built-not-hotdog-with-mobile-tensorflow-keras-react-native-ef03260747f3
+
 
 Sport:
 
