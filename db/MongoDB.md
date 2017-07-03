@@ -22,6 +22,7 @@ There is an ability to isolate a single write operation that affects multiple do
 **$isolated** prevent other processes from interleaving once the write operation modifies the first document.
 This ensures that no client sees the changes until the write operation completes or errors out.
 
+ > Note:   
  > $isolated does not work with sharded clusters.
  > An isolated write operation does not provide “all-or-nothing” atomicity. That is, an error during the write operation does not roll back all its changes that preceded the error.
 
