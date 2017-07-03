@@ -43,6 +43,12 @@ Operations on a single document are always atomic with MongoDB databases.
 Operations that involve multiple documents, “multi-document transactions”, are not atomic.
 ----
 
+**Atomicity:** if one operation fails, the previous operation within the transaction must “rollback” to the previous state (i.e. the “nothing,” in “all or nothing”).
+**Consistency:** if a major failure (i.e. network, hardware) interrupts the transaction, the database must be able to recover a consistent state.
+
+##### Concept of 2 phase commit:
+
+Using two-phase commit ensures that data is consistent and, in case of an error, the state that preceded the transaction is recoverable. During the procedure, however, documents can represent pending data and states.
 
 
 
