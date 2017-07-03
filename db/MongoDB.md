@@ -27,3 +27,19 @@ This ensures that no client sees the changes until the write operation completes
  > An isolated write operation does not provide “all-or-nothing” atomicity. That is, an error during the write operation does not roll back all its changes that preceded the error.
 
 
+Concurency control:
+
+1. unique index (on a field that can only have unique values). 
+This prevents insertions or updates from creating duplicate data. 
+
+
+#### Two phase commit:
+
+Multi-document updates or “multi-document transactions” 
+Writing data to multiple documents. This process can be extended to provide a rollback-like functionality.
+
+**Operations on a single document are always atomic with MongoDB databases**
+
+
+
+
