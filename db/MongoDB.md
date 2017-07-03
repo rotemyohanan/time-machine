@@ -38,7 +38,12 @@ This prevents insertions or updates from creating duplicate data.
 Multi-document updates or “multi-document transactions” 
 Writing data to multiple documents. This process can be extended to provide a rollback-like functionality.
 
-**Operations on a single document are always atomic with MongoDB databases**
+----
+**Operations on a single document are always atomic with MongoDB databases**.
+**Operations that involve multiple documents, “multi-document transactions”, are not atomic. **
+----
+
+
 
 
 
