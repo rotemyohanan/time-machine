@@ -37,3 +37,8 @@ https://www.fitnessblender.com/videos/cardio-hiit-workout-butt-thighs-abs-ultima
 
 
 https://cloudacademy.com/blog/microservices-architecture-challenge-advantage-drawback/
+
+#### Tomcat
+
+
+https://l-webx.gitbooks.io/how_tomcat_works/content/tomcat_default_connector/README.html
