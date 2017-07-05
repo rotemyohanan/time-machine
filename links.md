@@ -1,4 +1,8 @@
 
+### Google
+
+https://developers.google.com/web/updates/2017/04/headless-chrome
+
 ### Kafka
 
  https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines
