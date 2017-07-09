@@ -1,3 +1,12 @@
+### Angular
+
+https://www.youtube.com/watch?v=i9MHigUZKEM
+
+### JavaScript Ebooks
+
+https://addyosmani.com/resources/essentialjsdesignpatterns/book/
+http://bdcampbell.net/javascript/book/javascript_the_good_parts.pdf
+
 ### NGINX
 
 https://www.nginx.com/blog/introduction-to-microservices/
