@@ -45,3 +45,14 @@ o add each element of the value separately, use the $each modifier with $push.
 
 
 
+### order the collection results
+
+first the "city":'banga' after the results get all the other collections.
+
+db.collection.aggregate([
+{ $project: {_id : 1, "name": 1, "city" : 1, 
+    isRequiredCity: { $cond: { if: { $eq: [ "$city", "banga" ] }, then: 0, else: 1 } }} },
+{$sort : {"isRequiredCity" : 1} }    
+]);
+
+
