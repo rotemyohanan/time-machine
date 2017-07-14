@@ -5,3 +5,69 @@ Designed to simplify the bootstrapping and development of a new Spring applicati
 The framework takes an opinionated approach to configuration, 
 freeing developers from the need to define boilerplate configuration.
 
+
+
+spring boot 
+
+1) use the spring initializer as a bootstrap to start the project.
+
+Bootstrap contains all the boiler plates for the application.
+
+2) click generate project
+
+'curl start.spring.io/starter.zip' -o demo.zip -d dependenies=web.actuator -d application'
+'curl start.spring.io/starter.zip' -o demo.zip --data @option'
+
+--data @option
+
+option is a file.
+
+
+Intellij Idea:
+--------------
+choose Spring initializer
+
+@RestController  - mapping the UploadController.
+
+
+@RequestMapping(value ="/upload" method = RequestMethod.POST, produces = MediaType.IMAGE_GIF_VALUE)
+
+Logger factory as a Logger
+
+
+
+'application.propertoes' file contains all the properties
+    
+    multipart.location=${java.io.tmpdir}  
+    server.port=9000
+
+spring boot dev tools - enable the automatic restart.
+This is a very important feature to minimizing the restart time of the application.
+        
+        
+@EnableAutoConfiguration
+        - review 
+        - Tuning
+        - Demystifying
+        - writing your own
+        
+Spring highly configurable:
+questions should be asked:
+
+Web application / desktop application
+    - frontend?
+    - data access?
+    - security ?
+    
+    
+Auto configuration is a must when using Spring Boot
+
+Conditions:
+1) Presence/Absence of a jar.
+2) Presence/Absence of a Bean.
+3) Presence/Absence of a Property.
+
+    
+MongoDB cursor:
+A pointer to the result set of a query. Clients can iterate through a cursor to retrieve results.
+        
