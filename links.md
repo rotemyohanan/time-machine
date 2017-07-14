@@ -1,3 +1,7 @@
+### JetBrain
+
+https://www.jetbrains.com/research/devecosystem-2017/
+
 ### Angular
 
 https://www.youtube.com/watch?v=i9MHigUZKEM
