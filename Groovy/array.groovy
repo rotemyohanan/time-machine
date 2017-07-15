@@ -10,3 +10,4 @@ assert !(arrStr instanceof List)
 def numArr = [1, 2, 3] as int[]      
 assert numArr instanceof int[]
 
+
