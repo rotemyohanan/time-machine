@@ -29,3 +29,25 @@ After Finish:
     git push origin master
     git push origin develop
     git push origin 01082016
+
+
+
+create a Hotfix
+
+git pull (develop and master)
+
+VERSION== 01062016
+
+
+Finish the git flow
+
+The ‘TAG’  is 01062016
+
+git checkout master
+git push (push to the origin/master)
+
+git checkout develop
+git push (push to the origin/develop)
+
+git push origin 01062016
+
