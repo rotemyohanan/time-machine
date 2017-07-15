@@ -68,6 +68,69 @@ LTRIM
 
 Lists can be easily act like a queue or stack
 
+
+
+// --------------- Redis --------------- //
+
+// installation
+wget http://download.redis.io/redis-stable.tar.gz
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+make
+
+// Info
+
+This is a data structure server (not key-value store), This is not relational Database (like mongo)
+The value is not limited. (holds complex data structures/types) - atomic operations
+
+String, List, Set, Sorted Set, Hashed, Bit array (bitmaps)
+
+Redis is written in ANSI C and therefore does not have a VM
+Redis is an in-memory but persistent on disk database
+
+adv of the in memeory: 
+    1. very high write and read (if the context is smaller than the memory size)
+    2. the memory representation of complex data structures is much simpler to manipulate compared to the same data structure on disk, so Redis can do a lot, with little internal complexity
+    3. 
+    
+
+Keys:
+Redis keys - binary safe.
+"comment:1234:reply.to" or "comment:1234:reply-to" // these are good examples.
+small keys: key -> String pair
+Keys: key -> Hash value
+
+ 
+
+Commands:
+             <ip-host>
+redis-cli -h 5.153.35.251 ping  // Return PONG for existing connection
+// Full command
+$ redis-cli -h host -p port -a password
+
+
+npm install redis
+
+
+command line should start with the prefix:
+    redis-cli -h <ip-number> (5.153.35.251)
+
+String value (main methods):
+    DEL
+    DUMP - returns serialized version of the value stored at the specified key
+    EXISTS
+    SET - format should be: <key> <value>
+    GET
+    KEYS <keyname> returns the key if it exists else (empty list or set)
+   
+        
+List value (main methods):
+When insert a list it behaves like a stack - 'LIFO' (When LPUSH is the insertion command)
+
+    LRANGE <startIndex> <endIndex> // zero based
+    LPUSH <key> <value>
+    RPUSH <key> <value> // insert into the right side of the list
+
 LRANGE <key> 0 1 —> returns the first element in the list  (from Zero not included the 1’th position)
 
 
