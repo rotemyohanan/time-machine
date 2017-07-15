@@ -52,3 +52,33 @@ Successfuly received by user:
     println "del[1] " + del[1]
     println users.get(del[0])
     println " - - - - - - - - - - - - - "
+
+
+
+
+// -------------  Groovy structure  ------------- //
+
+// Shebang line - means that the groovy distribution and the groovy command is available on the PATH
+#!/usr/bin/env groovy
+
+//Groovy’s static import capability allows you to reference imported classes as if they were static methods in your own class. 
+//example:
+import static Boolean.FALSE
+assert !FALSE //use directly, without Boolean prefix!
+
+//Static imports with the ('as') keyword provide an elegant solution to namespace problems.
+import static Calendar.getInstance as now 
+assert now().class == Calendar.getInstance().class
+
+
+// The Main groovy script
+signature: Main.groovy
+
+// The script file is always complied into a class.
+// The script is compiled into a bytecode.
+
+// There is no need to define variables type inside the script (even no def)
+
+
+
+
