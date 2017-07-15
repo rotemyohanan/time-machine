@@ -113,3 +113,147 @@ Use it before the class signature.
 @RequestMapping("/viewAllBooks") - before the method
 
 */
+
+
+
+
+
+// --------------  Grails Web Layers  -------------- //
+/*
+Controllers:
+    A controller handles requests and creates or prepares the response.
+    A controller can generate the response directly or delegate to a view.
+    To create a controller, simply create a class whose name ends with Controller in the grails-app/controllers directory
+*/  
+grails create-controller book // Creating a controller at the location "grails-app/controllers/myapp/BookController.groovy"
+
+/*
+Controller actions:
+    A controller can have multiple public action methods. each action is mapped to a URI
+    The preffered approach is to use method (at the past it was made using closures)
+    The benefits are:
+    - Memory efficient.
+    - Allow using of stateless controllers (singleton scope)
+    - override actions
+    - Methods can be intercepted with standard proxying mechanisms
+
+
+    The controller has a default URI that maps to the root URI
+    default action:
+        - If there is only 1 action - it is the default action.
+        - method with the name index - is the default when there are multiple actions.
+        - set the property of the relevant method to default
+        static defaultAction = "list"
+  
+
+    Scope: hash-like objects where you can store variables.
+    
+        servletContext - Also known as application scope, this scope lets you share state across the entire web application. 
+                         The servletContext is an instance of ServletContext
+        session - allows associating state with a given user and typically uses cookies to associate a session with a client. 
+                  The session object is an instance of HttpSession
+        request - The request object allows the storage of objects for the current request only. 
+                  The request object is an instance of       HttpServletRequest
+        params - Mutable map of incoming request query string or POST parameters
+        flash - ...
+*/
+static scope = "singleton"
+
+// Define default scope:
+grails.controllers.defaultScope = "singleton"
+
+/*
+    Creating a controller:
+        1. class name includes Controller in the suffix.
+        2. define the package where the controller is defined.
+        3. 
+*/ 
+
+//Controller Example:
+package asia.grails.tutorial
+
+class HelloController {
+	def index() {              // returns to the browser in the index.gsp.
+		render "Hello World"   // render = return result to the browser.
+	}
+	def hi() {                 // returns to the browser in the hi.gsp.
+		render "How are you?"
+	}
+}
+
+//The show action is used to display and individual resource by id
+def show(Book book) {
+    respond book
+}
+// The following code is equivalent to the above code.
+def show(Book book) {
+    if(book == null) {
+        render status:404
+    }
+    else {
+        return [book: book]
+    }
+}
+
+// .gsp - static HTML file.
+
+
+
+//The show action, which is used to display and individual resource by id.
+def show(Book b) {
+    respond b
+}
+
+def show(Book b) {
+    if(b==null) {
+        render status:404 // Renders the content that will be returned to the browser as the response body.
+                          // render(options = nil, extra_options = {}, &block) protected
+    }
+    else {
+        return[book: b]
+    }
+}
+
+
+//The save action creates new resource representations
+@Transactional
+def save(Book book) { }
+
+//The update action updates an existing resource representations and is largely similar to the save action.
+@Transactional
+def update(Book book) { }
+
+
+
+// ------------ Grails - The Service Layer ------------ //
+/*
+Grails defines the notion of a service layer. 
+The Grails team discourages the embedding of core application logic inside controllers, as it does not promote reuse and a clean separation of concerns.
+Services in Grails are the place to put the majority of the logic in your application, leaving controllers responsible for handling request flow with redirects and so on.
+
+*/
+
+// Creating a service:
+grails create-service helloworld.simple // Creating a service in 'grails-app/services/helloworld/SimpleService.groovy'
+// A service's name ends with the convention Service, other than that a service is a plain Groovy class.
+
+domain-class <-->  Services // coordinating logic.
+// Frequently require transactional behaviour.
+// All services are transactional by default. It may be changed by setting the transactional property to false
+class CountryService {
+    static transactional = false
+}
+
+//------------------------------------------------------//
+/*    Important
+dependency injection is the only way that declarative transactions work. 
+You will not get a transactional service if you use the new operator such as new BookService()
+In practice: Creating Controller and in the C'tor signature we referencing to the relevant service and inject it when creating the controller.
+*/
+//------------------------------------------------------//
+
+// Grails also provides @Transactional and @NotTransactional annotations for cases where you need more fine-grained control over transactions.
+// at a per-method level or need to specify an alternative propagation level. it enables mixing betweent the Class and the methods:
+// For example, the @NotTransactional annotation can be used to mark a particular method to be skipped when a class is annotated with @Transactional.
+
+
