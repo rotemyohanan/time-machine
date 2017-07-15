@@ -166,3 +166,38 @@ class Book {
         defaultHiddenMembership nullable: true
     }
 
+
+
+
+
+
+
+//  ----------------------  Object Relational Mapping  -------------------------- //
+/*
+Domain classes are core to any business application.
+
+A domain class fulfills the M in the Model View Controller (MVC) pattern 
+It represents a persistent entity that is mapped onto an underlying database table.
+In Grails a domain is a class that lives in the 'grails-app/domain' directory.
+*/
+
+// Creating domain class
+grails create-domain-class org.bookstore.Book
+    
+/*    
+The class name, by default, is mapped to the table name in lower case and separated by underscores 
+instead of camel case so a domain class named BookStore by default would map to a table named book_store. 
+Each property maps to individual columns
+*/
+
+/*
+Emphasizes:
+    1. Don't give the same name to classes (even if they are in different packages) cause the mapping will be into the same table in the DB.
+
+*/
+
+
+// Dynamic finders:
+/*
+    
+*/
