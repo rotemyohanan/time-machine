@@ -1,10 +1,9 @@
+## Spring overview
 
+The same development without EJB
+Spring is for Enterprise development without using an **application server**.
 
-the same development without EJB
-
-spring is for enterprise development without using an application server.
-
-Tomcat is a web server it is not an application server. is it lightwight.
+Tomcat is a **web server** it is **not an application server**. (Tomcat is lightwight)
 Spring is POJO based. // PLain old Java Object.
 Spring cleaner easier and quicker.
 
