@@ -88,4 +88,28 @@ spring.mvc.favicon.enabled=false
 look for the link of the #common-application-properties
 
 @Bean - define custom bean
+
+Exclude Auto configured servlet or filter
+
+@FilterRegistrationBean
+@ServletRegistrationBean
+
+completely custom annotation:
+
+Remove @EnableAutoConfiguration and manually configure array of auto configuration @Configuration and @Import
+
+
+@PostConstruct
+
+default is the **JacksonAutoConfiguration**  - duing all the marshaling and unmarshaling of the JSON, hance this is very good for web applications.
+
+When I wan to exclude a bean from the auto configuration.
+
+    @SpringBootApplication(exclude = {JacksonAutoConfiguration.class, JmxAutoConfiguration.class, WebSocketAutoConfiguration.class})
+    
+The exclude gets and array of classes
+
+
+ **HiddenHttpMethodFilter** registered by default with the **WebMvcAutoConfiguration**
+ 
  
