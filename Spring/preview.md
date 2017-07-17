@@ -4,12 +4,15 @@ The same development without EJB
 Spring is for Enterprise development without using an **application server**.
 
 Tomcat is a **web server** it is **not an application server**. (Tomcat is lightwight)
-Spring is POJO based. // PLain old Java Object.
-Spring cleaner easier and quicker.
 
-It is build around best practices. Singeltons Factories, Pattern annotation based.
+Spring is POJO based. // Plain old Java Object.
+Spring is:
+ - cleaner 
+ - easier
+ - quicker
+ - build around best practices. (Singeltons Factories, Pattern annotation based).
 
-Using Maven / Gradle to manage downloads.
+Manage downloads using **Maven / Gradle**
 
 Spring is solving the following problem:
 
@@ -19,6 +22,7 @@ Spring increases:
 -scalability
 
 Spring reduces the complex of the code and help to focus on the business focus.
+
 Complex code done faster and remove the complexity.
 
 Java using JDBC.
