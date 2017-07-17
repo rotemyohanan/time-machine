@@ -148,5 +148,11 @@ In the class level add the following annotations:
     @Configuration
     @ConditionalOnClass({FFmpegFrameGrabber.class, AnimatedGifEncoder.class})
 
+If a method returns a service I should add in the signature of the method the annotation 
+
+    @Bean
+    
+    @PostConstruct // can be used to define a default value q behaviour.
+
 
      
