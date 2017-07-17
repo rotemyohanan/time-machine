@@ -25,9 +25,12 @@ Spring reduces the complex of the code and help to focus on the business focus.
 
 Complex code done faster and remove the complexity.
 
-Java using JDBC.
-IT is not that pretty
+Java is using JDBC (which is not that pretty)
 
+
+
+
+Spring 4 requires using JAVA 8.
 
 
 
