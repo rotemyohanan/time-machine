@@ -1,10 +1,9 @@
 
+Annotation
 
-@ConfigurationProperties
+    @ConfigurationProperties
 
-Annotate with @configurationProperties
-
-turns all of your application configuration into typesafe POJOs
+Turns all of your application configuration into typesafe POJOs
 
 
 @Component annotation - add the configuration in the component scan
@@ -12,3 +11,15 @@ turns all of your application configuration into typesafe POJOs
 
     @Inject
     private MyConfig config;
+
+
+Validate the code using annotations:
+
+    @NotNull
+    @Patten   //regexp
+    @Max
+    @Min
+    @Digit
+    
+    
+    configure third party calsses
