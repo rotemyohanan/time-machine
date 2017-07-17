@@ -71,3 +71,21 @@ Conditions:
 MongoDB cursor:
 A pointer to the result set of a query. Clients can iterate through a cursor to retrieve results.
         
+        
+        
+Application properties:
+ 
+ @ConditionalOnMissingBean
+ 
+ 
+ 
+#### Application properties:
+
+spring.dao.exceptiontranslation.enabled = false
+
+spring.mvc.favicon.enabled=false
+
+look for the link of the #common-application-properties
+
+@Bean - define custom bean
+ 
