@@ -71,6 +71,7 @@ Spring automatically wires Beans:
          <property name="0 ref="customerRepository"/>
       </bean>
 
+Without the **autowire** we get a **NPE** when the application runs.
 
 
 
