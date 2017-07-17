@@ -44,5 +44,22 @@ Inline list
     numbers: [one, two]
     
 
+
+Create a file calls application.yml (should contains all the properties in the application.properties)
+
+    multipart:
+       maxFileSize: 50MB
+       maxRequestSize: 50MB
+       location: ${java.io.tmpdir}
+       
+spring:
+   mvc:
+      favicon:
+          enabled: false
+          
+logging:
+  level.: DEBUG // the . is DEBUG at the Root level (else remove the dot.)
+  
+  
      
 
