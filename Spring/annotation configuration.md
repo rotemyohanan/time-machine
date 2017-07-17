@@ -8,6 +8,12 @@
 
 Steretype annotation:
 
-@Component
-@Service  (inherit from @Component)
-@Repository  (inherit from @Component)
+    @Component 
+    @Service  (extends @Component) // holds the business logic layer
+    @Repository  (extends @Component) // holds the data layer
+
+In the application the **@component** defines the class as a **Bean**.
+
+
+    @Repository("customerRepository")  // the customerRepository is the @Repository's name
+    @Service("customerService")        // the customerRepository is the @Repository's name
