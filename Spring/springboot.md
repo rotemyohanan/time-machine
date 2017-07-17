@@ -113,3 +113,40 @@ The exclude gets and array of classes
  **HiddenHttpMethodFilter** registered by default with the **WebMvcAutoConfiguration**
  
  
+
+In the **application.properties** set :
+ 
+    spring.mvc.favicon.enabled=false
+    
+    
+
+    RequestContextFilter
+    
+    
+#### @ConditionalOn... Annotation
+
+conditions - method matches() - main method in order for a component to be registered.
+
+Presence or Absence of class on Classpath
+
+Conditions:
+  
+    @ConditionalOnClass // aplly this conf if the class exists in the class path.
+    @ConditionalOnMissingClass
+        
+    @ConditionalOnBean
+    @ConditionalOnMissingBean
+
+    @ConditionalOnProperty
+    @ConditionalOnMissingProperty
+    
+    
+#### Custom Auto configuration:
+
+In the class level add the following annotations:
+
+    @Configuration
+    @ConditionalOnClass({FFmpegFrameGrabber.class, AnimatedGifEncoder.class})
+
+
+     
