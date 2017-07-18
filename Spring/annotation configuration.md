@@ -16,4 +16,7 @@ In the application the **@component** defines the class as a **Bean**.
 
 
     @Repository("customerRepository")  // the customerRepository is the @Repository's name
-    @Service("customerService")        // the customerRepository is the @Repository's name
+    @Service("customerService")        // the customerService is the @Service's name
+    
+#### Autowired
+    @Autowired
