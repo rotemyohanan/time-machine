@@ -28,6 +28,7 @@ Spring namespaces is like a dictionary.
 
 
 ##### Beans
+----------
 These are POJO classes.
 Replace the keyword **new**
 They define a class and use the Interface.
