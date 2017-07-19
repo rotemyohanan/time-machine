@@ -6,17 +6,18 @@
 
 ### ApplicationContext.xml
 
-This is a root XML file.
+
+This is a Spring configuration file (a root XML file.).
 (Convention over configuration.)
 it is a sort of HashMap inside of the Application.
 That can be a registry to the application.
 XML configuration begins with this file.
 
-under the **src.main.resources.applicationXontext.xml**
+##### Location
+Under the **src.main.resources.applicationXontext.xml**
 
-This is a Spring configuration file.
+##### namespaces
 
-namespaces:
 Spring namespaces is like a dictionary.
 
 ### XML declaration
@@ -26,39 +27,31 @@ Spring namespaces is like a dictionary.
     </bean>
 
 
-Beans: 
+##### Beans
 These are POJO classes.
 Replace the keyword **new**
-Define a class and use the Interface.
+They define a class and use the Interface.
 
-seperate configuration from the business logic - that helps use the same business logic in production and on development although the configuration is different.
-
-This calls the seperation of concerns.
+seperate configuration from the business logic - that helps use the same business logic in production and on development although the configuration is different. (this calls the seperation of concerns)
 
 The beans are defined inside the **applicationContext.xml file**.
 
     <bean name="customerRepository class="com.repositoryImple"></bean>
     
-Setter injection.
+
+##### The Spring reduces the following:
+1. No new object should be done in the code.
+2. No getters and setters in the class. (clean code)
 
 
-The Spring reduces the following:
-
-no new object should be done in the code
-no getters and setters in the class.
-
-
-Calling to the ApplicationContext:
+#### Calling to the ApplicationContext:
 
     ApplicationContext appContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-    
-(under the **src.main.resources**)
-
     Customerservice customerService = appContext.getBean("customerService", CustomerService.class);
     
 
 
-@Autowire
+#### @Autowire
 
 Spring automatically wires Beans:
 - **byType**
