@@ -8,4 +8,4 @@
     
     /META-INF/spring.factories    // this is a properties file
     
-    the **META-INF** is under the **Resources** add the spring.factories file
+The **META-INF** is under the **Resources** add the spring.factories file
