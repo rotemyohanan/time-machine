@@ -44,7 +44,7 @@ Inline list
     
 
 
-Create a file calls application.yml (should contains all the properties in the application.properties)
+Create a file calls **application.yml** (should contains all the properties in the application.properties)
 
     multipart:
        maxFileSize: 50MB
