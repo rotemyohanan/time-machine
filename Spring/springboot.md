@@ -1,51 +1,46 @@
-### Spring Boot
+### Spring Boot 
 
-A brand new framework from the team at Pivotal. 
-Designed to simplify the bootstrapping and development of a new Spring application. 
+Owner: Pivotal
+It is a brand new framework.
+
+###### What it is used for?
+Designed to simplify the bootstrapping and development of a new Spring application.
 The framework takes an opinionated approach to configuration, 
-freeing developers from the need to define boilerplate configuration.
+Freeing developers from the need to define boilerplate configuration (for the application).
 
-
-
-spring boot 
-
+##### How it works?
 1) use the spring initializer as a bootstrap to start the project.
-
-Bootstrap contains all the boiler plates for the application.
-
 2) click generate project
 
-'curl start.spring.io/starter.zip' -o demo.zip -d dependenies=web.actuator -d application'
-'curl start.spring.io/starter.zip' -o demo.zip --data @option'
 
---data @option
+     'curl start.spring.io/starter.zip' -o demo.zip -d dependenies=web.actuator -d application'
+     'curl start.spring.io/starter.zip' -o demo.zip --data @option'
 
-option is a file.
+ > option is a file.
 
 
-Intellij Idea:
+##### Using Intellij Idea:
 --------------
+
 choose Spring initializer
 
-@RestController  - mapping the UploadController.
-
-
-@RequestMapping(value ="/upload" method = RequestMethod.POST, produces = MediaType.IMAGE_GIF_VALUE)
+    @RestController  // mapping the UploadController.
+    @RequestMapping(value ="/upload" method = RequestMethod.POST, produces = MediaType.IMAGE_GIF_VALUE)
 
 Logger factory as a Logger
-
-
 
 'application.propertoes' file contains all the properties
     
     multipart.location=${java.io.tmpdir}  
     server.port=9000
 
-spring boot dev tools - enable the automatic restart.
+###### Automatic restart
+Using the spring boot dev tools. 
+
 This is a very important feature to minimizing the restart time of the application.
         
         
-@EnableAutoConfiguration
+    @EnableAutoConfiguration
         - review 
         - Tuning
         - Demystifying
@@ -67,23 +62,17 @@ Conditions:
 2) Presence/Absence of a Bean.
 3) Presence/Absence of a Property.
 
+
+
     
-MongoDB cursor:
-A pointer to the result set of a query. Clients can iterate through a cursor to retrieve results.
-        
-        
-        
-Application properties:
- 
- @ConditionalOnMissingBean
+      @ConditionalOnMissingBean
  
  
  
-#### Application properties:
+#### Define the application properties:
 
-spring.dao.exceptiontranslation.enabled = false
-
-spring.mvc.favicon.enabled=false
+    spring.dao.exceptiontranslation.enabled = false
+    spring.mvc.favicon.enabled=false
 
 look for the link of the #common-application-properties
 
@@ -91,8 +80,8 @@ look for the link of the #common-application-properties
 
 Exclude Auto configured servlet or filter
 
-@FilterRegistrationBean
-@ServletRegistrationBean
+    @FilterRegistrationBean
+    @ServletRegistrationBean
 
 completely custom annotation:
 
@@ -101,31 +90,21 @@ Remove @EnableAutoConfiguration and manually configure array of auto configurati
 
 @PostConstruct
 
-default is the **JacksonAutoConfiguration**  - duing all the marshaling and unmarshaling of the JSON, hance this is very good for web applications.
+Default is the **JacksonAutoConfiguration**  - doing all the marshaling and unmarshaling of the JSON, hance this is very good for web applications.
 
-When I wan to exclude a bean from the auto configuration.
+When I wan to exclude a bean from the auto configuration. (The exclude gets and array of classes)
 
     @SpringBootApplication(exclude = {JacksonAutoConfiguration.class, JmxAutoConfiguration.class, WebSocketAutoConfiguration.class})
     
-The exclude gets and array of classes
-
 
  **HiddenHttpMethodFilter** registered by default with the **WebMvcAutoConfiguration**
- 
- 
-
-In the **application.properties** set :
- 
-    spring.mvc.favicon.enabled=false
     
-    
-
     RequestContextFilter
     
     
 #### @ConditionalOn... Annotation
 
-conditions - method matches() - main method in order for a component to be registered.
+conditions - method **matches()** - main method in order for a component to be registered.
 
 Presence or Absence of class on Classpath
 
@@ -151,7 +130,7 @@ In the class level add the following annotations:
 If a method returns a service I should add in the signature of the method the annotation 
 
     @Bean
-    
+   
     @PostConstruct // can be used to define a default value q behaviour.
 
 
