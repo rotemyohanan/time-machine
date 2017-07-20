@@ -13,8 +13,9 @@ Yaml vs properties
 
 ### YAML Basics:
 
-properties: key values are String
- yml keys are String values are respective type
+properties: **key** values are **String**
+
+yml keys are **String** values are respective type
  
  Define a Map as value to the key
  properties (.) denote hierarchy     
