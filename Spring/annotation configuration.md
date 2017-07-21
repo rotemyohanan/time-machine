@@ -17,3 +17,14 @@ In the application the **@component** defines the class as a **Bean**.
     
 #### Autowired
     @Autowired
+
+
+#### EnableAutoConfiguration
+
+@EnableAutoConfiguration
+
+@Import(EnableAutoConfigurationImportSelector.class)
+
+SpringFactoriesLoader.loadFactoryNames(...)
+
+/META-INF/spring.factories    // this is a properties file
