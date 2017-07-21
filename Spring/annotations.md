@@ -83,5 +83,26 @@ The context:component-scan element requires a base-package attribute, which, as 
 
 
 Emphasises:
- > Always use these annotations over concrete classes; not over interfaces.
+ > Always use these **annotations over concrete classes**; not over interfaces.
+ 
+ 
+### Configuration
+
+    @ConfigurationProperties     // Turns all of your application configuration into typesafe POJOs
+
+    @Component 
+ add the configuration in the component scan @EnableconfigurationProperties(MyConfig.class)
+
+@Inject
+private MyConfig config;
+Validate the code using annotations:
+
+@NotNull
+@Patten   //regexp
+@Max
+@Min
+@Digit
+
+
+configure third party calsses
  
