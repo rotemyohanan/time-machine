@@ -7,7 +7,7 @@ Decleration of the bean's scope attribute to be prototype.
 
 #### @Component
 ----
-The @Component annotation marks a java class as a bean so the component-scanning mechanism of spring can pick it up and pull it into the application contex.
+The @Component annotation marks a java class as a bean so the **component-scanning mechanism** of spring can pick it up and pull it into the **application contex**.
 
     @Component
     public class EmployeeDAOImpl implements EmployeeDAO {
