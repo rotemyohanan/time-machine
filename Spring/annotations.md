@@ -1,4 +1,8 @@
 
+#### Bean
+
+@Bean - define custom bean
+
 #### Spring default bean scope:
 ----
 
