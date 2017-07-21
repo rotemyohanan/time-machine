@@ -3,6 +3,10 @@
 
 @Bean - define custom bean
 
+#### PostConstruct
+
+@PostConstruct
+
 #### Spring default bean scope:
 ----
 
