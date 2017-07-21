@@ -76,8 +76,6 @@ Conditions:
 
 look for the link of the #common-application-properties
 
-@Bean - define custom bean
-
 Exclude Auto configured servlet or filter
 
     @FilterRegistrationBean
@@ -87,8 +85,6 @@ completely custom annotation:
 
 Remove @EnableAutoConfiguration and manually configure array of auto configuration @Configuration and @Import
 
-
-@PostConstruct
 
 Default is the **JacksonAutoConfiguration**  - doing all the marshaling and unmarshaling of the JSON, hance this is very good for web applications.
 
@@ -131,7 +127,7 @@ If a method returns a service I should add in the signature of the method the an
 
     @Bean
    
-    @PostConstruct // can be used to define a default value q behaviour.
+    @PostConstruct // can be used to define a default value / behaviour.
 
 
      
