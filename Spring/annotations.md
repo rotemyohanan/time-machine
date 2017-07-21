@@ -1,7 +1,6 @@
-
 #### Bean
 
-@Bean - define custom bean
+    @Bean // Is used to define a custom bean.
 
 #### PostConstruct
 
@@ -13,6 +12,20 @@
 Spring produces a new bean instance each time one is needed. 
 Decleration of the bean's scope attribute to be prototype. 
 
+### Stereotype annotations
+----
+Define the beans themselves so the container is aware of them and can inject them for you. 
+But with @Component, @Repository, @Service and @Controller annotations in place and after enabling automatic component scanning, spring will automatically import the beans into the container so you don’t have to define them explicitly with XML. These annotations are called Stereotype annotations as well.
+
+Main Stereotype Spring annotations:
+
+    @Component 
+    @Service  (extends @Component) // holds the business logic layer
+    @Repository  (extends @Component) // holds the data layer
+
+
+
+
 #### @Component
 ----
 The @Component annotation marks a java class as a bean so the **component-scanning mechanism** of spring can pick it up and pull it into the **application contex**.
@@ -21,6 +34,12 @@ The @Component annotation marks a java class as a bean so the **component-scanni
     public class EmployeeDAOImpl implements EmployeeDAO {
         ...
     }
+
+In the application the **@component** defines the class as a **Bean**.
+
+    @Repository("customerRepository")  // the customerRepository is the @Repository's name
+    @Service("customerService")        // the customerService is the @Service's name
+
 
 #### @Singleton (default bean's scope)
 ----
@@ -64,12 +83,6 @@ ou can use another annotation i.e. **@RequestMapping** (to map URLs to instance 
 ----
 It handles only wiring of the bean to the specific class. 
 
-### Stereotype annotations
-----
-Define the beans themselves so the container is aware of them and can inject them for you. 
-But with @Component, @Repository, @Service and @Controller annotations in place and after enabling automatic component scanning, spring will automatically import the beans into the container so you don’t have to define them explicitly with XML. These annotations are called Stereotype annotations as well.
-
-
 ### How to enable component scanning
 -------
 
@@ -107,3 +120,16 @@ Validate the code using annotations:
 
 configure third party calsses
  
+
+
+#### EnableAutoConfiguration
+
+@EnableAutoConfiguration
+
+@Import(EnableAutoConfigurationImportSelector.class)
+
+SpringFactoriesLoader.loadFactoryNames(...)
+
+/META-INF/spring.factories    // this is a properties file
+
+
