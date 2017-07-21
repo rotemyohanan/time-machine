@@ -14,7 +14,13 @@ The @Component annotation marks a java class as a bean so the component-scanning
     public class EmployeeDAOImpl implements EmployeeDAO {
         ...
     }
+
+
+Adding the annotation and location scanner:
     
+    <context:annotation-config/>
+    <context:component-scan base-package="com.pluralsight" />
+
 
 #### @Singleton (default bean's scope)
 ----
