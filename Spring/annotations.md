@@ -5,7 +5,6 @@
 Spring produces a new bean instance each time one is needed. 
 Decleration of the bean's scope attribute to be prototype. 
 
-
 #### @Component
 ----
 The @Component annotation marks a java class as a bean so the component-scanning mechanism of spring can pick it up and pull it into the application contex.
@@ -14,13 +13,6 @@ The @Component annotation marks a java class as a bean so the component-scanning
     public class EmployeeDAOImpl implements EmployeeDAO {
         ...
     }
-
-
-Adding the annotation and location scanner:
-    
-    <context:annotation-config/>
-    <context:component-scan base-package="com.pluralsight" />
-
 
 #### @Singleton (default bean's scope)
 ----
@@ -75,6 +67,7 @@ But with @Component, @Repository, @Service and @Controller annotations in place 
 
 To enable scanning, you will need to use **“context:component-scan”** tag in your **applicationContext.xml** file. e.g.
 
+    <context:annotation-config/>
     <context:component-scan base-package="com.howtodoinjava.demo.service" />
     <context:component-scan base-package="com.howtodoinjava.demo.dao" />
     <context:component-scan base-package="com.howtodoinjava.demo.controller" />
