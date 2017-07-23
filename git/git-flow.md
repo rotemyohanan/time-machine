@@ -4,7 +4,7 @@ Using Git Flow
 https://danielkummer.github.io/git-flow-cheatsheet/
 
 
-#### commands order:
+##### commands order:
 ----------
     git flow hotfix start 05072017
     git flow hotfix publish 05072017
