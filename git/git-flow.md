@@ -49,11 +49,14 @@ checkout the relevant branch you wish to be on it.
 
     git push origin 01062016
 
-###### Error messages:
+#### Error messages:
 -------
 Console error: 
-Already on 'hotfix/05072017'
-Reason: 
-Your branch is up-to-date with 'origin/hotfix/05072017'.
+
+    Already on 'hotfix/05072017'
+
+Reason:
+
+    Your branch is up-to-date with 'origin/hotfix/05072017'.
 
 
