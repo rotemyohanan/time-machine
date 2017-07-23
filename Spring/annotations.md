@@ -135,3 +135,6 @@ SpringFactoriesLoader.loadFactoryNames(...)
 /META-INF/spring.factories    // this is a properties file
 
 
+### @Transactional
+
+ > It is not working on private methods unless using AspectJs mode.
