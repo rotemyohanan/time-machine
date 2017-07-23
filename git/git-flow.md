@@ -37,7 +37,9 @@ After Finish:
     git push origin 01082016
 
 
-When using the command line:
+-------------------------------------------------------------------------------
+
+#### When using the command line:
 
 checkout the relevant branch you wish to be on it.
 
