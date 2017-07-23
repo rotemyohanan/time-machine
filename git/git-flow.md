@@ -57,6 +57,6 @@ Console error:
 
 Reason:
 
-    Your branch is up-to-date with 'origin/hotfix/05072017'.
+Your branch is up-to-date with 'origin/hotfix/05072017'.
 
 
