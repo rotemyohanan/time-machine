@@ -10,17 +10,23 @@ https://danielkummer.github.io/git-flow-cheatsheet/
     git flow hotfix publish 05072017
     git flow hotfix finish '05072017'
 
-Already on 'hotfix/05072017'
-Your branch is up-to-date with 'origin/hotfix/05072017'.
+
+Define a hotfix version/TAG, for example: TAG/VERSION== 01062016
+
+##### Before Create:
+-------
+
+    git pull develop
+    git pull master
 
 
-Before Finish:
--------------
+##### Before Finish:
+-------
     pull develop
     pull master
     pull hotfix/01082016
 
-Finish:
+##### Finish:
 ------
     git flow hotfix finish 01082016
 
@@ -31,23 +37,23 @@ After Finish:
     git push origin 01082016
 
 
+When using the command line:
 
-create a Hotfix
+checkout the relevant branch you wish to be on it.
 
-git pull (develop and master)
+    git checkout master
+    git push (push to the origin/master)
 
-VERSION== 01062016
+    git checkout develop
+    git push (push to the origin/develop)
 
+    git push origin 01062016
 
-Finish the git flow
+###### Error messages:
+-------
+Console error: 
+Already on 'hotfix/05072017'
+Reason: 
+Your branch is up-to-date with 'origin/hotfix/05072017'.
 
-The ‘TAG’  is 01062016
-
-git checkout master
-git push (push to the origin/master)
-
-git checkout develop
-git push (push to the origin/develop)
-
-git push origin 01062016
 
