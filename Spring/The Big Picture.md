@@ -19,7 +19,8 @@ Implementations of these interfaces will normally use an O/R mapping technology 
 ####  Persistent domain objects
 These model real objects or concepts such as a bank account.
 
-#### Databases and legacy systems: By far the most common case is a single RDBMS. However, there
+#### Databases and legacy systems 
+By far the most common case is a single RDBMS. However, there
 may be multiple databases, or a mix of databases and other transactional or non-transactional legacy
 systems or other enterprise resources. The same fundamental architecture is applicable in either case.
 This is often referred to as the EIS (Enterprise Information System) tier.
