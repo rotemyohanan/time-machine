@@ -24,13 +24,6 @@ By far the most common case is a single RDBMS. However, there
 may be multiple databases, or a mix of databases and other transactional or non-transactional legacy
 systems or other enterprise resources. The same fundamental architecture is applicable in either case.
 This is often referred to as the EIS (Enterprise Information System) tier.
-In a J2EE application, all layers except the EIS tier will run in the application server or web container. Domain
-objects will typically be passed up to the presentation layer, which will display data they contain, but not modify
-them, which will occur only within the transactional boundaries defined by the business services layer. Thus
-there is no need for distinct Transfer Objects, as used in traditional J2EE architecture.
-In the following sections we'll discuss each of these layers in turn, beginning closest to the database.
-Important Spring aims to decouple architectural layers, so that each layer can be modified as far as
-possible without impacting other layers. No layer is aware of the concerns of the layer above;
-as far as possible, dependency is purely on the layer immediately below. Dependency
-between layers is normally in the form of interfaces, ensuring that coupling is as loose as
-possible.
+In a J2EE application, all layers except the EIS tier will run in the application server or web container. 
+Domain objects will be passed up to the presentation layer, which will display data they contain, but not modify
+them, which will occur only within the transactional boundaries defined by the business services layer. 
