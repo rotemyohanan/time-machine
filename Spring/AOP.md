@@ -20,6 +20,9 @@ The additional behavior is applied by a chain of advice (usually interceptors) m
 AOP proxy, which wraps the POJO target object.
 Spring AOP allows the proxying of interfaces or classes. 
 
+
+#### proxy-based AOP framework
+
 **Declarative transaction management:** This is the most important out-of-the-box service supplied
 with Spring. It's analogous to the value proposition of EJB container-managed transactions (CMT)
 with the following big advantages:
