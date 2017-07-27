@@ -11,10 +11,10 @@ It should be possible to have alternative presentation layers — such as a web 
 This is responsible for transactional boundaries and providing an entry point for operations on the system as a whole. 
 This layer should have no knowledge of presentation concerns, and should be reusable.
 
-#### DAO interface layer: This is a layer of interfaces independent of any data access technology that is
-used to find and persist persistent objects. This layer effectively consists of Strategy interfaces for the
-Business services layer. This layer should not contain business logic. Implementations of these interfaces
-will normally use an O/R mapping technology or Spring's JDBC abstraction.
+#### DAO interface layer 
+This is a layer of interfaces independent of any data access technology that is used to find and persist persistent objects. This layer effectively consists of Strategy interfaces for the Business services layer. 
+This layer should not contain business logic. 
+Implementations of these interfaces will normally use an O/R mapping technology or Spring's JDBC abstraction.
 
 ####  Persistent domain objects
 These model real objects or concepts such as a bank account.
