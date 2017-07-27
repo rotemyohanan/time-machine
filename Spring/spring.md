@@ -34,6 +34,11 @@ Dependency Management and Naming Conventions. (Dependency management and depende
 These dependencies are not virtual components that are injected, but physical resources in a file system (typically).
     
     
+The technology that Spring is most identified with is **Inversion of Control**, and specifically the **Dependency
+Injection** flavor of Inversion of Control. 
+
+
+
 Logging:
 ========
 The mandatory logging dependency in Spring is the Jakarta Commons Logging API (JCL)    
