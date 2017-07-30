@@ -59,7 +59,6 @@ $isolated operator - isolate a single write operation that affects multiple docu
 
 mongod instance running on localhost on port number 27017
 
-
 Import data into the collection
 
     mongoimport --db test --collection resturants --drop --file primer-dataset.json
@@ -120,84 +119,86 @@ Update multiple documents, by addition of {multi: true}
 
 
 https://css-tricks.com/couple-takes-sticky-footer/
-// Replace a document - if the "_id" is not in the update section then the mongoDB creates new "_id"
-/* .remove()  - removing a data.  By default removes all documents that match the remove condition.
-    Returns a WriteResult object which contains the status of the operation.  
+
+Replace a document - if the **"_id"** is not in the update section then the mongoDB creates new "_id"
+
+    .remove()  // removing a data.  
+By default removes all documents that match the remove condition.
+Returns a WriteResult object which contains the status of the operation.  
+   
     nRemoved field specifies the number of documents removed
-*/
-db.restaurants.remove( { "borough": "Manhattan" } )  // removes all documents that match the specified condition.
-// justOne Option limits the remove operation to only one of the matching document.
-db.restaurants.remove( { "borough": "Queens" }, { justOne: true } )
 
-// Remove all the documents in the collection. It will be more efficient to drop the entire collection.
-db.restaurants.remove( { } )
-====================================================================
-// Drop collection
-// .drop()
-// Returns true / false (depending on the success)
-db.restaurants.drop()
-====================================================================
-// Find in array
-array of 'values' = ['liora'] in each customAttribute document.
-db.customAttribute.find({ values : { $in : ['liora'] }})
-====================================================================
+    db.restaurants.remove( { "borough": "Manhattan" } )  // removes all documents that match the specified condition.
 
-// Aggregation:
+JustOne Option limits the remove operation to only one of the matching document.
+    
+    db.restaurants.remove( { "borough": "Queens" }, { justOne: true } )
+
+Remove all the documents in the collection. It will be more efficient to drop the entire collection.
+    
+    db.restaurants.remove( { } )
+
+#### Drop collection
+
+    db.restaurants.drop()
+Returns true or false
+    
+
+#### Find in array
+array of 'values' = ['liora'] in each **customAttribute** document.
+
+    db.customAttribute.find({ values : { $in : ['liora'] }})
+
+#### Aggregation:
 Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result.
     
-db.customAttribute.find({}).limit(5)// returns only the 5 first results.
-db.customAttribute.find({}).skip(2)// skip the first 2 results.
-db.customAttribute.find({}).sort({KEY: 1}) // sort using a list of field along with their sorting order.
-//specifying the order using 1 = ascending / -1 = decending
+    db.customAttribute.find({}).limit(5)// returns only the 5 first results.
+    db.customAttribute.find({}).skip(2)// skip the first 2 results.
+    db.customAttribute.find({}).sort({KEY: 1}) // sort using a list of field along with their sorting order.
+
+Specifying the order using 1 = ascending / -1 = decending
     
-db.customAttribute.aggregate({ $match: {type: 'STRING'} }, {$match: {refElementClass: 'User'}}, { $limit : 4} )
+    db.customAttribute.aggregate({ $match: {type: 'STRING'} }, {$match: {refElementClass: 'User'}}, { $limit : 4} )
     
-// Aggregation operation. a stage-based aggregation. the method accepts an array of stages. 
-// Each stage processed sequentially, describes a data processing step.
-db.collection.aggregate( [ <stage1>, <stage2>, ... ] )
-// Use the $group stage to group by a specified key.
-db.restaurants.aggregate(
-   [
-       //        The grouping key.
-     { $group: { "_id": "$borough", "count": { $sum: 1 } } }
-   ]
-);
-//  $match  - stage to filter documents.
-//  $sum  - accumulator to calculate the count.
-db.restaurants.aggregate(
-   [
-     { $match: { "borough": "Queens", "cuisine": "Brazilian" } },
-     { $group: { "_id": "$address.zipcode" , "count": { $sum: 1 } } }
-   ]
-);
+Aggregation operation. a stage-based aggregation. the method accepts an array of stages. 
+Each stage processed sequentially, describes a data processing step.
+    
+    db.collection.aggregate( [ <stage1>, <stage2>, ... ] )
+Use the $group stage to group by a specified key.
+    
+    db.restaurants.aggregate([{ $group: { "_id": "$borough", "count": { $sum: 1 } } } // The grouping key.]);
+    //  $match  - stage to filter documents.
+    //  $sum  - accumulator to calculate the count.
+    db.restaurants.aggregate([
+       { $match: { "borough": "Queens", "cuisine": "Brazilian" } },
+       { $group: { "_id": "$address.zipcode" , "count": { $sum: 1 } } }]);
 
-// Indexes can support the efficient execution of queries
-// MongoDB automatically creates an index on the _id field upon the creation of a collection.
-// createIndex() method to create an index on a collection if the idnex does not exists.
-db.restaurants.createIndex( { "cuisine": 1 } )
-// Returns a document with the status of the operation.
-// The return status
-{
-  "createdCollectionAutomatically" : false,
-  "numIndexesBefore" : 1,
-  "numIndexesAfter" : 2, // in success the index number after is one greater than the numIndexBefore.
-  "ok" : 1
-}
+Indexes can support the efficient execution of queries
+MongoDB automatically creates an index on the _id field upon the creation of a collection.
+createIndex() method to create an index on a collection if the idnex does not exists.
+    
+    db.restaurants.createIndex( { "cuisine": 1 } )
+Returns a document with the status of the operation.
+The return status:
+   
+    {"createdCollectionAutomatically" : false,
+     "numIndexesBefore" : 1,
+     "numIndexesAfter" : 2, // in success the index number after is one greater than the numIndexBefore.
+     "ok" : 1 }
 
-// Creating a compound index (indexes on multiple fields):
-// The order of the fields determine how the index stores its keys
-db.restaurants.createIndex( { "cuisine": 1, "address.zipcode": -1 } )
+Creating a compound index (indexes on multiple fields):
+The order of the fields determine how the index stores its keys
+    
+    db.restaurants.createIndex( { "cuisine": 1, "address.zipcode": -1 } )
 
-// Concurrency:
-/* 
-$isolated operator, a write operation that affects multiple documents can prevent other processes from interleaving 
+#### Concurrency: 
+**$isolated** operator, a write operation that affects multiple documents can prevent other processes from interleaving 
 once the write operation modifies the first document.
 This ensures that no client sees the changes until the write operation completes or errors out.
 $isolated does not work with sharded clusters.
 An isolated write operation does not provide “all-or-nothing” atomicity. 
-*/
 
-/* Indexes: support the efficient execution of queries in MongoDB
+**Indexes:** support the efficient execution of queries in MongoDB
 Indexes are special data structures which store a small portion of the collection’s data, 
 set in an easy to traverse form.
 Default: "_id"  this is the ObjectId. (created by the mongod)
@@ -207,21 +208,23 @@ without an index performing a collection search.(which is slow)
 if the index exists - then it limits the number of documents the query inspects.
 MongoDB can return sorted results by using the ordering in the index.
 MongoDB indexes use a B-tree data structure.
-*/
 
-// ---- upload the MongoDB in the localhost --- //
-// 1. open interactive command prompt and enter:
-//Running the mongo
-mongo --host bt-local
-//Default port mongo 27017
 
-//'bt_read' - database production with READ ONLY permissions
+Upload the MongoDB in the localhost
+1. open interactive command prompt and enter:
 
-/////////////////////////////////////////////////////////////////////
-//              Define MongoDB in RoboMongo
-/////////////////////////////////////////////////////////////////////
+Running the mongo
+    
+    mongo --host bt-local
+
+Default port mongo 27017
+
+    'bt_read' - database production with READ ONLY permissions
+
+
+        Define MongoDB in RoboMongo
+
 // Name: any name I want
-
 // databases:
 bt_production
 audit_production
