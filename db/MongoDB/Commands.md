@@ -56,3 +56,6 @@ db.collection.aggregate([
 ]);
 
 
+### Date sorting
+
+     db.collection.find({'dateCreated':{ $gte : new ISODate("2016-03-12T20:15:31Z")}})
