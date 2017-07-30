@@ -50,77 +50,74 @@ Operations that involve multiple documents, “multi-document transactions”, a
 
 Using two-phase commit ensures that data is consistent and, in case of an error, the state that preceded the transaction is recoverable. During the procedure, however, documents can represent pending data and states.
 
-
-
-
-
-
-
-
-/* 
+ 
 All queries in mongoDB have the scope of a single collection.
-Query - returns all the documents in a collection / filterd documents that passed the filter. 
+**Query**   returns all the documents in a collection / filterd documents that passed the filter. 
+
 Write operations are atomic on the level of a single document, even if the operation modifies multiple embedded documents within a single document.
 When a single write operation modifies multiple documents, the modification of each document is atomic, but the operation as a whole is not atomic and other operations may interleave.
 $isolated operator - isolate a single write operation that affects multiple documents.
-*/
-mongod instance running on localhost on port number 27017
-// Import data into the collection
-mongoimport --db test --collection resturants --drop --file primer-dataset.json
-// help 
-help
-// Creating database / change to exists database / switch to existing database 
-use <db-name>
-// Insert Document - [WriteResult]
-// Each insertion creates automatic "_id" to the document if there is no existing one.
-db.resturants.insert(
- {
-  "address" : {
-    "street"  : "2 Avenue",
-    "zipcode" : "10075"
-  },
-     "brought" : "Manhattan"
- }
-)
 
-// Find() - retrieve all the data from a collection
-db.resturants.find() // Returns all the documents in the resturants collection.
-db.resturants.findOne() // returns the first document according to the natural order which reflects the order of documents on the disk
-// Filter:
-db.resturants.find({ "borough": "Manhattan" }) // find the documents which their field "borough" == "Manhattan"
-/* 
+mongod instance running on localhost on port number 27017
+
+
+Import data into the collection
+
+    mongoimport --db test --collection resturants --drop --file primer-dataset.json
+    help 
+
+Creating database or change to exists database or switch to existing database 
+   
+    use <db-name>
+  
+#### Insert Document - [WriteResult]
+Each insertion creates automatic "_id" to the document if there is no existing one.
+  
+    db.resturants.insert({
+        "address" : { 
+        "street"  : "2 Avenue",
+        "zipcode" : "10075"},
+        "brought" : "Manhattan"
+     })
+
+
+#### Find() - retrieve all the data from a collection
+
+    db.resturants.find() // Returns all the documents in the resturants collection.
+    db.resturants.findOne() // returns the first document according to the natural order which reflects the order of documents on the disk
+
+Filter:
+
+    db.resturants.find({ "borough": "Manhattan" }) // find the documents which their field "borough" == "Manhattan"
+
     $gt - greater than.
     $lt - less than.
     
-*/
-db.restaurants.find( { "grades.score": { $gt: 30 } } )
-// OR $or
-db.restaurants.find(
-   { $or: [ { "cuisine": "Italian" }, { "address.zipcode": "10075" } ] }
-)
-// .sort() query result
-db.restaurants.find().sort( { "borough": 1, "address.zipcode": 1 } ) // The sorting order is defined by the fields order inside the {}
+    db.restaurants.find( { "grades.score": { $gt: 30 } } )
 
-// update() - update documents of a collection - by default udpates single document. 
-// Returning Object: WriteResult(contains the status of the operation).
-// update() cannot update the "_id" field.
-db.restaurants.update(
-    { "name" : "Juni" },  // This is the document which is updated.
-    {
-      $set: { "cuisine": "American (New)" }, // sets the value for the field "cuisine"
-      $currentDate: { "lastModified": true }
-    }
-)
+OR $or
+  
+    db.restaurants.find({ $or: [{"cuisine": "Italian"}, {"address.zipcode": "10075"}]}).sort() 
+query result
+  
+    db.restaurants.find().sort( { "borough": 1, "address.zipcode": 1 } ) 
+The sorting order is defined by the fields order inside the {}
 
-// update multiple documents, by addition of {multi: true}
-db.restaurants.update(
-  { "address.zipcode": "10016", cuisine: "Other" },
-  {
-    $set: { cuisine: "Category To Be Determined" },
-    $currentDate: { "lastModified": true }
-  },
-  { multi: true}
-)
+#### update() - update documents of a collection - by default udpates single document. 
+Returning Object: WriteResult(contains the status of the operation).
+update() cannot update the "_id" field.
+
+    db.restaurants.update(
+       { "name" : "Juni" },  // This is the document which is updated.
+       { $set: { "cuisine": "American (New)" }, // sets the value for the field "cuisine"
+         $currentDate: { "lastModified": true }
+       })
+
+Update multiple documents, by addition of {multi: true}
+  
+    db.restaurants.update({ "address.zipcode": "10016", cuisine: "Other"},
+        {$set: {cuisine:"Category To Be Determined"},
+         $currentDate: {"lastModified": true}},{multi: true})
 
 
 https://css-tricks.com/couple-takes-sticky-footer/
