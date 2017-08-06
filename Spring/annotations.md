@@ -30,13 +30,17 @@ Main Stereotype Spring annotations:
 ----
 The @Component annotation marks a java class as a bean so the **component-scanning mechanism** so spring can pick it up and pull it into the **application contex**.
 
- 1. Such classes are considered as candidates for auto-detection.
- 2. When using annotation-based configuration and classpath scanning.
+  > Such classes are considered as candidates for auto-detection.
+  > When using annotation-based configuration and classpath scanning.
 
-    @Component
-    public class EmployeeDAOImpl implements EmployeeDAO {
-        ...
-    }
+Using Spring the component package path:
+ 
+     package org.springframework.stereotype
+     @interface
+     @Component
+     public class EmployeeDAOImpl implements EmployeeDAO {
+         ...
+     }
 
 In the application the **@component** defines the class as a **Bean**.
 
