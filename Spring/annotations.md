@@ -30,8 +30,8 @@ Main Stereotype Spring annotations:
 ----
 The @Component annotation marks a java class as a bean so the **component-scanning mechanism** so spring can pick it up and pull it into the **application contex**.
 
- **1. Such classes are considered as candidates for auto-detection.**
- **2. When using annotation-based configuration and classpath scanning.**
+ 1. Such classes are considered as candidates for auto-detection.
+ 2. When using annotation-based configuration and classpath scanning.
 
     @Component
     public class EmployeeDAOImpl implements EmployeeDAO {
@@ -42,7 +42,7 @@ In the application the **@component** defines the class as a **Bean**.
 
     @Repository("customerRepository")  // the customerRepository is the @Repository's name
     @Service("customerService")        // the customerService is the @Service's name
-
+    @Aspect ("org.aspectj.lang.annotation.Aspect")
 
 #### @Singleton (default bean's scope)
 ----
