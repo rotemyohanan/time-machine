@@ -35,9 +35,12 @@ https://developers.google.com/web/updates/2017/04/headless-chrome
  https://kafka.apache.org/intro
     
     
-    
-    
-Errors:
+#### JavaScript
+
+https://blog.patricktriest.com/what-is-async-await-why-should-you-care/
+ 
+ 
+### Errors:
 
 
   https://i.stack.imgur.com/whhD1.png
