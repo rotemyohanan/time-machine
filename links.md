@@ -74,3 +74,7 @@ https://cloudacademy.com/blog/microservices-architecture-challenge-advantage-dra
 
 
 https://l-webx.gitbooks.io/how_tomcat_works/content/tomcat_default_connector/README.html
+
+#### Node.js
+old video:
+https://www.youtube.com/watch?v=jo_B4LTHi3I
