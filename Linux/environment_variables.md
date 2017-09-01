@@ -20,5 +20,8 @@
     
 ### JAVA
 
-    export JAVA_HOME=/usr/lib/jvm/default-java/bin/java
-    export PATH=$PATH:$JAVA_HOME/bin
+set in the ~/.profile file:
+
+    JAVA_HOME="/opt/java/jdk1.8.0_144"
+    GRADLE_HOME="/.sdkman/candidates/gradle/4.1"
+    PATH="$PATH:$JAVA_HOME/bin:$GRADLE_HOME/bin"
