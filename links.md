@@ -78,3 +78,14 @@ https://l-webx.gitbooks.io/how_tomcat_works/content/tomcat_default_connector/REA
 #### Node.js
 old video:
 https://www.youtube.com/watch?v=jo_B4LTHi3I
+
+
+chen:
+https://www.youtube.com/watch?v=fw3WkySh_Ho
+https://www.youtube.com/watch?v=93E_GzvpMA0
+https://www.quora.com/Should-I-learn-Express-js-or-Koa-js-for-node
+https://irlpodcast.org/?utm_source=internetcitizen&utm_medium=blog&utm_campaign=irl&utm_content=trailercompanion
+https://addyosmani.com/resources/essentialjsdesignpatterns/book/
+https://blog.mozilla.org/internetcitizen/2017/06/19/introducing-irl-original-podcast-mozilla/
+https://www.npmjs.com/package/objectdigger
+https://github.com/ramda/ramda
