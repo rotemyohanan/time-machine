@@ -4,7 +4,17 @@ Under the git directory
     
     git init
 The response will be
-Initialized empty Git repository in /Users/reuven/Desktop/gitfun/.git/
+Initialized empty Git repository in **/Users/rotemy/Desktop/gitfun/.git/**
+We now have a new repository!
+
+Git has configured a few things:
+ 1. **.git** directory, under which things are stored.  
+ 2. **.git/objects"** which is where Git stores things.
+
+    $ ls .git/objects
+    info/  pack/
+
+
     
 Fetch the specified remote's copy of the specified branch and merge it into the local copy.
     
