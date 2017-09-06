@@ -1,4 +1,11 @@
 
+### @EnableAutoConfiguration 
+Often placed on your main class. 
+Implicitly defines a base “search package” for certain items. 
+For example, if you are writing a JPA application, the package of the @EnableAutoConfiguration annotated class will be used to search for @Entity items.
+
+Using a root package also allows the **@ComponentScan** annotation to be used without needing to specify a basePackage attribute. You can also use the **@SpringBootApplication** annotation if your main class is in the root package.
+
 #### @RestController
 Meaning it’s ready for use by Spring MVC to handle web requests. 
 
