@@ -89,3 +89,8 @@ https://addyosmani.com/resources/essentialjsdesignpatterns/book/
 https://blog.mozilla.org/internetcitizen/2017/06/19/introducing-irl-original-podcast-mozilla/
 https://www.npmjs.com/package/objectdigger
 https://github.com/ramda/ramda
+
+
+#mongoDB
+getting started
+https://dzone.com/articles/beginners-walkthrough-mongodb-and-java?edition=324491&utm_source=Daily%20Digest&utm_medium=email&utm_campaign=Daily%20Digest%202017-09-07
