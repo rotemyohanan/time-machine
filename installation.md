@@ -49,8 +49,8 @@ Git
 https://docs.brew.sh/Installation.html
 
 #### Install MongoDB
-
-
+Install Robomongo:
+   https://robomongo.org/download
 
 ### Install kafka tool
 ### Install zoo keeper
