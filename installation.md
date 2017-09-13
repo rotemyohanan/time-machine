@@ -44,3 +44,17 @@ Install springboot
 Git
 
 
+### homebrew
+
+https://docs.brew.sh/Installation.html
+
+#### Install MongoDB
+
+
+
+### Install kafka tool
+### Install zoo keeper
+
+
+
+
