@@ -38,3 +38,9 @@ Install springboot
 ### Downlaod Brackets
 
     http://brackets.io/#
+    
+#### Other installations
+
+Git
+
+
