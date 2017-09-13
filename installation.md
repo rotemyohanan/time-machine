@@ -51,6 +51,7 @@ https://docs.brew.sh/Installation.html
 #### Install MongoDB
 Install Robomongo:
    https://robomongo.org/download
+connect databases in the Robomongo to the localhost and QA.
 
 ### Install kafka tool
 ### Install zoo keeper
