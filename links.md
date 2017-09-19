@@ -97,3 +97,7 @@ https://dzone.com/articles/beginners-walkthrough-mongodb-and-java?edition=324491
 
 recovery mongoDB
 https://dzone.com/users/login.html
+
+#### microservices
+
+https://dzone.com/storage/assets/4855140-microservices-for-java-developers.pdf
