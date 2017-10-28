@@ -14,3 +14,29 @@
     module.exports = {
       entry: './path/to/my/entry/file.js'
     };
+
+
+### Output
+
+
+Once you've bundled all of your assets together, you still need to tell webpack where to bundle your application. 
+
+The webpack output property tells webpack how to treat bundled code.
+
+    webpack.config.js
+
+    const path = require('path');
+
+    module.exports = {
+      entry: './path/to/my/entry/file.js',
+      output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'my-first-webpack.bundle.js'
+     }
+    };
+    
+    
+#### Loaders
+The goal is to have all of the assets in your project be webpack's concern and not the browser's (though, to be clear, this doesn't mean that they all have to be bundled together). 
+webpack treats every file (.css, .html, .scss, .jpg, etc.) as a module. However, webpack itself only understands JavaScript.
+
