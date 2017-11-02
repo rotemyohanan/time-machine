@@ -46,6 +46,8 @@ Tests syntax:
 
 
     protected Application configure() {
+    enable(TestProperties.LOG_TRAFFIC);
+    enable(TestProperties.DUMP_ENTITY);
       return new ResourceConfig().packages("com.pluralsight");
     }
 
@@ -60,3 +62,21 @@ Tests syntax:
       Collection<Book? response = target("books").request().get(new GenericType<Collection<Book>>(){});
       assertEqulas(2, response.size());
     }
+
+
+
+### @Context
+
+    @Context Request request;
+    
+Inject our own objects into a resource?
+Bundles HK2 (built in Jersey) is capable of that. Requirees only a binder in the ResourceConfig
+
+
+
+
+    
+
+
+
+
