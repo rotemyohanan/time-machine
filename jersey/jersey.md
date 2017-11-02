@@ -93,5 +93,20 @@ Writing a REST call tests:
     
 
 
+@ManagedAsync
 
+This method should be run on a Jersey managed thread. 
+
+
+JSON provider: jackson-jaxrs-json-provider
+
+    public class BookApplication extends ResourceConfig {
+        
+        JacksonJsonProvider json = new JacksonJsonProvider().configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+        
+        package("com.pluralsight");
+        register((AbstractBinder) () -> {bind(dao).to(BookDao.class); });
+        register(json);
+    
+    }
 
