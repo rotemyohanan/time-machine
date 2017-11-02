@@ -73,7 +73,22 @@ Inject our own objects into a resource?
 Bundles HK2 (built in Jersey) is capable of that. Requirees only a binder in the ResourceConfig
 
 
-
+Writing a REST call tests:
+    
+    @Test
+    public void testAddBook() {
+        Book book = new Book();
+        book.setTitle("title");
+        book.setAuthor("author");
+        Entity<Book> bookEntity = Entity.entity(book, MediaType.APPLICATION_JSON_TYPE);
+        Response response = target("books").request().post(bookEntity);
+        
+        assertEquals(200, response.getStatus());
+        Book responseBook = response.readEntity(Book.class);
+        assertNotNull(responseBook.getId());
+        assertEquals("title",responseBook.getTitle());
+        assertEquals("author",responseBook.getAuthor());
+    }
 
     
 
