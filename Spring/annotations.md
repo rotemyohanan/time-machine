@@ -5,7 +5,7 @@ Is a convenience annotation that adds all of the following:
 
 ### @ComponentScan 
 Tells Spring to look for other components, configurations, and services in the hello package, allowing it to find the controllers.
-
+**This is related to the package to scan.**
 
 ### @EnableAutoConfiguration 
 Often placed on your main class. 
@@ -31,7 +31,17 @@ The @RequestMapping annotation provides “routing” information. It is telling
 [Tip]
 The @RequestMapping annotation is a Spring MVC annotations (they are not specific to Spring Boot). See the MVC section in the Spring Reference Documentation for more details.
 
+----------------------
 
+    @RequestMapping("/greeting")
+    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
+        return new Greeting(counter.incrementAndGet(),
+                            String.format(template, name));
+    }
+
+@RequestParam binds the value of the query string parameter name into the name parameter of the greeting() method. This query string parameter is explicitly marked as optional (required=true by default): if it is absent in the request, the defaultValue of "World" is used.
+
+----------------------
 #### Bean
 
     @Bean // Is used to define a custom bean.
