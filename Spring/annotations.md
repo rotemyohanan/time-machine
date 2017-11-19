@@ -56,7 +56,7 @@ URL:
      }
      
 
-##@PathVariable## annotation has only one attribute value for binding the request URI template. 
+**@PathVariable** annotation has only one attribute value for binding the request URI template. 
 It is allowed to use the multiple **@PathVariable** annotation in the single method. 
 But, ensure that no more than one method has the same pattern.
 
