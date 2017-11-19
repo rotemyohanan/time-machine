@@ -41,7 +41,19 @@ The @RequestMapping annotation is a Spring MVC annotations (they are not specifi
 
 @RequestParam binds the value of the query string parameter name into the name parameter of the greeting() method. This query string parameter is explicitly marked as optional (required=true by default): if it is absent in the request, the defaultValue of "World" is used.
 
-----------------------
+	public String getDetails(@RequestParam(value="param1", required=true) String param1,
+		        	   @RequestParam(value="param2", required=false) String param2){
+		...
+	}
+
+The following are the list of parameters supported by the **@RequestParam** annotation:
+
+**defaultValue** – This is the default value as a fallback mechanism if request is not having the value or it is empty.
+**name** – Name of the parameter to bind
+**required** – Whether the parameter is mandatory or not. If it is true, failing to send that parameter will fail.
+**value** – This is an alias for the name attribute
+
+
 
 URL:  
 
