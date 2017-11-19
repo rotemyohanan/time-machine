@@ -49,10 +49,12 @@ The @RequestMapping annotation is a Spring MVC annotations (they are not specifi
 The following are the list of parameters supported by the **@RequestParam** annotation:
 
 **defaultValue** – This is the default value as a fallback mechanism if request is not having the value or it is empty.
-**name** – Name of the parameter to bind
-**required** – Whether the parameter is mandatory or not. If it is true, failing to send that parameter will fail.
-**value** – This is an alias for the name attribute
 
+**name** – Name of the parameter to bind.
+
+**required** – Whether the parameter is mandatory or not. If it is true, failing to send that parameter will fail.
+
+**value** – This is an alias for the name attribute
 
 
 URL:  
