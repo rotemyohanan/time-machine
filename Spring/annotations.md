@@ -16,10 +16,20 @@ Using a root package also allows the **@ComponentScan** annotation to be used wi
 
 #### @RestController
 Meaning it’s ready for use by Spring MVC to handle web requests. 
+This is known as a stereotype annotation. It provides hints for people reading the code, and for Spring, that the class plays a specific role. In this case, our class is a web @Controller so Spring will consider it when handling incoming web requests.
+
+
+[Tip]
+The @RestController annotation is a Spring MVC annotations (they are not specific to Spring Boot). See the MVC section in the Spring Reference Documentation for more details.
 
 
 #### @RequestMapping 
 maps to the index() method. When invoked from a browser or using curl on the command line, the method returns pure text. That’s because @RestController combines @Controller and @ResponseBody, two annotations that results in web requests returning data rather than a view.
+
+The @RequestMapping annotation provides “routing” information. It is telling Spring that any HTTP request with the path “/” should be mapped to the home method. The @RestController annotation tells Spring to render the resulting string directly back to the caller.
+
+[Tip]
+The @RequestMapping annotation is a Spring MVC annotations (they are not specific to Spring Boot). See the MVC section in the Spring Reference Documentation for more details.
 
 
 #### Bean
