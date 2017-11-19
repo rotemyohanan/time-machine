@@ -43,6 +43,25 @@ The @RequestMapping annotation is a Spring MVC annotations (they are not specifi
 
 ----------------------
 
+URL:  
+
+    http://localhost:8080/springmvc/hello/101?param1=10&param2=20
+    
+ 
+    @RequestMapping("/hello/{id}")    
+    public String getDetails(@PathVariable(value="id") String id,
+         @RequestParam(value="param1", required=true) String param1,
+         @RequestParam(value="param2", required=false) String param2) {
+         .......
+     }
+     
+
+##@PathVariable## annotation has only one attribute value for binding the request URI template. 
+It is allowed to use the multiple **@PathVariable** annotation in the single method. 
+But, ensure that no more than one method has the same pattern.
+
+
+
 
 #### MongoDB annotations
 
