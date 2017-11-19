@@ -42,6 +42,38 @@ The @RequestMapping annotation is a Spring MVC annotations (they are not specifi
 @RequestParam binds the value of the query string parameter name into the name parameter of the greeting() method. This query string parameter is explicitly marked as optional (required=true by default): if it is absent in the request, the defaultValue of "World" is used.
 
 ----------------------
+
+
+#### MongoDB annotations
+
+    package hello;
+
+    import java.util.List;
+
+    import org.springframework.data.mongodb.repository.MongoRepository;
+    import org.springframework.data.repository.query.Param;
+    import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+    @RepositoryRestResource(collectionResourceRel = "people", path = "people")
+    public interface PersonRepository extends MongoRepository<Person, String> {
+
+	    List<Person> findByLastName(@Param("name") String name);
+
+    }
+
+
+At runtime, Spring Data REST will create an implementation of this interface automatically. 
+Then it will use the @RepositoryRestResource annotation to direct Spring MVC to create RESTful endpoints at **/people**.
+
+
+
+
+
+
+
+
+
+
 #### Bean
 
     @Bean // Is used to define a custom bean.
