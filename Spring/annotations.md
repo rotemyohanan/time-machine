@@ -7,6 +7,14 @@ Is a convenience annotation that adds all of the following:
 Tells Spring to look for other components, configurations, and services in the hello package, allowing it to find the controllers.
 **This is related to the package to scan.**
 
+Enabling component scanning with scan(String...)
+To enable component scanning, just annotate your @Configuration class as follows:
+  @Configuration
+  @ComponentScan(basePackages = "com.acme")
+  public class AppConfig  {
+... }
+
+
 ### @EnableAutoConfiguration 
 Often placed on your main class. 
 Implicitly defines a base “search package” for certain items. 
