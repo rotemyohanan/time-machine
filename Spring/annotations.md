@@ -1,6 +1,11 @@
 
 
 ### @SpringBootApplication 
+Spring needs to know which packages to scan for annotated components in order to add them to the IoC container.
+The main application should be set with the **@SpringBootApplication**
+
+Under the hood, **@SpringBootApplication** is a composition of the **@Configuration, @ComponentScan, and @EnableAutoConfiguration** annotations.
+
 Is a convenience annotation that adds all of the following:
 
 ### @ComponentScan 
