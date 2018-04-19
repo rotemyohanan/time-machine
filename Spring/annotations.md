@@ -132,7 +132,7 @@ Decleration of the bean's scope attribute to be prototype.
 ### Stereotype annotations
 ----
 Define the beans themselves so the container is aware of them and can inject them for you. 
-But with @Component, @Repository, @Service and @Controller annotations in place and after enabling automatic component scanning, spring will automatically import the beans into the container so you don’t have to define them explicitly with XML. These annotations are called Stereotype annotations as well.
+But with **@Component, @Repository, @Service, @Controller** annotations in place and after enabling automatic component scanning, spring will automatically import the beans into the container so you don’t have to define them explicitly with XML. These annotations are called Stereotype annotations as well.
 
 Main Stereotype Spring annotations:
 
