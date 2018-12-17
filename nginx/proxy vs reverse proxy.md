@@ -41,3 +41,9 @@ Advantages:
 
 Server side discovery & Load balancer
 
+
+### Service Registry
+
+Key part of the discovery
+This is a database containing the network location of service instances.
+
