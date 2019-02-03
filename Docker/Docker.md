@@ -112,3 +112,26 @@ When you create a new container, you add a new, thin, writable layer on top of t
 This layer is often called the “container layer”. All changes made to the running container - such as writing new files, modifying existing files, and deleting files - are written to this thin writable container layer. 
 
 
+
+--------------------------------------------------
+
+
+### Docker file
+Contains instruciotns for building a Docker image.
+
+Keywords:
+From --> indicates the base image from which the container is built.
+Run --> indicates the command that needs to be executed on the image.
+
+##### Buiding an image commands
+```javascript
+    docker build -t <image-name>:tag
+```
+
+```javascript
+    docker run --name "container-name" -p <host port>:<container port> <image_name:tag>
+```
+
+### Docker image
+Based on many layers.
+Each image has a tag represents the image.
