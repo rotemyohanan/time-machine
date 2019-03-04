@@ -16,4 +16,6 @@ docker images // list all the images
 docker ps // shows available containers
 ```
 
-
+```javascript
+docker rm [image id] // remove an image
+```
