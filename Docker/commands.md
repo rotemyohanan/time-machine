@@ -19,3 +19,7 @@ docker ps // shows available containers
 ```javascript
 docker rm [image id] // remove an image
 ```
+
+```javascript
+docker stop [image id] // stops the running container
+```
