@@ -18,6 +18,7 @@ docker ps // shows available containers
 
 ```javascript
 docker rm [image id] // remove an image
+docker rmi [image id] // remove an image
 ```
 
 ```javascript
