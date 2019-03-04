@@ -135,3 +135,19 @@ Run --> indicates the command that needs to be executed on the image.
 ### Docker image
 Based on many layers.
 Each image has a tag represents the image.
+
+
+### Docker Volumes
+Special type of directory in a container typically referred as a "data volume"
+Can be shared and reuse among containers
+Update of an image will not affect a data volume
+Data volumes are persisted even after the container is deleted
+
+Creating a volume:
+```javascript
+docker run -p 8080:3000 -v /var/www node
+```
+
+### Docker host
+Hosting the container
+
