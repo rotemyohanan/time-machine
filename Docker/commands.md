@@ -18,7 +18,7 @@ docker ps -a // shows the containers (also containers which are not running)
 ```
 
 ```javascript
-docker rm [image id] // remove an image
+docker rm [image id] // remove an image / container
 docker rmi [image id] // remove an image
 ```
 
