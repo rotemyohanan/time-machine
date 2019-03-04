@@ -152,6 +152,8 @@ $(pwd) : host location
 /var/www : container volume
 ```
 
+Running ```docker inspect mycontainer``` for getting information about the container.
+
 ### Docker host
 Hosting the container
 
