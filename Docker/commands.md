@@ -13,7 +13,8 @@ docker images // list all the images
 ```
 
 ```javascript
-docker ps // shows available containers
+docker ps // shows available containers (running containers)
+docker ps -a // shows the containers (also containers which are not running)
 ```
 
 ```javascript
