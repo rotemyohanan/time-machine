@@ -145,7 +145,11 @@ Data volumes are persisted even after the container is deleted
 
 Creating a volume:
 ```javascript
-docker run -p 8080:3000 -v /var/www node
+docker run -p 8080:3000 -v $(pwd):/var/www node
+
+-v : create a volume
+$(pwd) : host location
+/var/www : container volume
 ```
 
 ### Docker host
