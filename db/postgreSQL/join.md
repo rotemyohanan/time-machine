@@ -1,4 +1,4 @@
-
+```javascript
 SELECT salesorder.order_is
 FROM salesorder, customer
 WHERE customer.name = 'Florence' AND
@@ -30,3 +30,4 @@ WHERE salesorder.customer_id = customr.customer_id AND
       salesorder.employee_id = employee.employee_id AND
       salesorder.part_id = part.part_id AND
       salesorder.order_id = 41367;
+```
