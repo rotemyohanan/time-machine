@@ -38,3 +38,23 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 
 
+### SSH key
+ Generating ssh key:
+
+run the command:
+```javascript
+ssh-keygen -t rsa
+```
+
+Than the answer is:
+```javascript
+Generating public/private RSA key pair.
+Enter file in which to save the key (/Users/rotemyohanan/.ssh/id_rsa):
+```
+
+Successful running of the command will result 2 files:
+```javascript
+    id_rsa
+    id_rsa.pub // public key
+```
+
