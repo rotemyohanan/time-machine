@@ -11,3 +11,10 @@ install Z shell
 brew install zsh
 
 ```
+
+
+Atom
+
+```javascript
+Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask'...
+```
