@@ -28,4 +28,8 @@ Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask'...
 brew install python3
 ```
 
+### iterm2
+```javascript
+brew cask install iterm2
+```
 
