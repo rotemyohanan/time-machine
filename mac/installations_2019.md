@@ -58,3 +58,9 @@ Successful running of the command will result 2 files:
     id_rsa.pub // public key
 ```
 
+Another option to generate the ssh key:
+```javascript
+ssh-keygen -m PEM -t rsa -f id_rsa
+```
+
+
