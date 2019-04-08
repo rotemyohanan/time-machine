@@ -23,8 +23,9 @@ Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask'...
 
 ```
 
-### Node.js & NPM
+### Python
 ```javascript
-
+brew install python3
 ```
+
 
