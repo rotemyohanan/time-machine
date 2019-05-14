@@ -97,3 +97,28 @@ Rules:
 
 Merge:
     - Join two or more development histories together
+
+
+
+
+
+Before creating a new branch, pull the changes from upstream. Your master needs to be up to date.
+```javascript
+$ git pull
+```
+Create the branch on your local machine and switch in this branch :
+```javascript
+$ git checkout -b [name_of_your_new_branch]
+```
+Push the branch on github :
+```javascript
+$ git push origin [name_of_your_new_branch]
+```
+When you want to commit something in your branch, be sure to be in your branch. Add -u parameter to set upstream.
+
+You can see all branches created by using :
+```javascript
+$ git branch -a
+```
+
+
