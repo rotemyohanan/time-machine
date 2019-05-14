@@ -100,7 +100,7 @@ Merge:
 
 
 
-
+#### New Branch
 
 Before creating a new branch, pull the changes from upstream. Your master needs to be up to date.
 ```javascript
