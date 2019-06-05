@@ -157,3 +157,8 @@ Running ```docker inspect mycontainer``` for getting information about the conta
 ### Docker host
 Hosting the container
 
+
+### Remove the container
+```docker container rm -f $(docker ps -qa) ```
+
+
