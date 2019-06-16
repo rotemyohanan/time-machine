@@ -122,3 +122,8 @@ $ git branch -a
 ```
 
 
+Git reset hard to a specific commit (reject the few commits I had before)
+```
+git reset --hard <sha1_of_where_you_want_to_be>
+```
+
