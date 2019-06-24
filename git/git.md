@@ -127,3 +127,16 @@ Git reset hard to a specific commit (reject the few commits I had before)
 git reset --hard <sha1_of_where_you_want_to_be>
 ```
 
+
+
+### Delete a branch
+
+```javascript
+git branch -d branch_name
+git push <remote_name> --delete <branch_name>
+
+code example:
+git branch -d dev1
+git push origin --delete dev1
+
+```
